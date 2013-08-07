@@ -94,7 +94,7 @@ TFLEnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a href="http://goo.gl/jhO9Nq" target="_blank">página</a>!</span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Ja deu uma olhada no <a href="http://goo.gl/Ci4Sv9" target="_blank">((( TRETA )))</a> hoje ?</span></div>')
         this.removeElements();
-        if (plugCubed == undefined) $.getScript("http://tatdk.github.io/plugCubed/compiled/plugCubed.min.js")
+        if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
     },
     close: function(){
         var Lang = require('lang/Lang');
@@ -259,12 +259,12 @@ initPopout : function(){
 },
     onChat: function(data){
         if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!strobe on') === 0) {
-            API.chatLog(data.from + ' hit the strobe light!');
+            API.chatLog(data.from + ' ligou os strobes!');
            require ('app/views/room/AudienceView').strobeMode('true');
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)|| data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!strobe off') === 0) {
             require ('app/views/room/AudienceView').strobeMode();
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave on') === 0) {
-            API.chatLog(data.from + ' turned the lights down!');
+            API.chatLog(data.from + ' desligou as luzes!');
              require ('app/views/room/AudienceView').lightsOut('true');
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave off') === 0) {
             require ('app/views/room/AudienceView').lightsOut();
@@ -299,6 +299,8 @@ initPopout : function(){
         }
        if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/madzomboy/plugbot/master/plugbot.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"update"}));}}
+       if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
+
     },
     removeElements: function() {
         require('app/views/room/AudienceView').initRoomElements = function() {}
@@ -339,7 +341,10 @@ initPopout : function(){
             setTimeout(function() {$.getScript('https://raw.github.com/madzomboy/TRETA-Enhanced/master/TCR-Enhanced.js')},5000)
             return;
         }
-        if (data.type === 'chat') {require('app/facades/ChatFacade').receive(data.data)}
+        if(data.type === 'reload'){
+            API.chatLog('recarregando o TRETA-Enhanced para todos os usuarios.')
+            location.reload();
+        } 
         }
        this.socket.onclose = function() {
         this.tries++;
