@@ -90,8 +90,8 @@ TFLEnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem vindo a sala oficial do blog TRETA, script criado por bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo</span> <a href="http://goo.gl/FjOaxp" target="_blank">grupo</a>!</div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa</span> <a href="http://goo.gl/jhO9Nq" target="_blank">página</a>!</div>');
+        a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo <a href="http://goo.gl/FjOaxp" target="_blank">grupo</a>!</span></div>');
+        a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a href="http://goo.gl/jhO9Nq" target="_blank">página</a>!</span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Ja deu uma olhada no <a href="http://goo.gl/Ci4Sv9" target="_blank">((( TRETA )))</a> hoje ?</span></div>')
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://tatdk.github.io/plugCubed/compiled/plugCubed.min.js")
