@@ -211,7 +211,7 @@ TFLEnhancedModel = require('app/base/Class').extend({
             + '.chat-text a:visited {color:#22FF00;}'
             + '.chat-text a:hover {color:#EF00FF;}'
             + '.chat-text a:active {color:#66FFFF;}'
-            + '#volume-bar-value {background-image: url("http://i.imgur.com/HF5pnAR.png");}' 
+            + '#volume-bar-value {background-image: url("https://dl.dropboxusercontent.com/u/198705975/luminant_volume.png");}' 
         + '</style>');
 },
 initPopout : function(){
@@ -252,7 +252,7 @@ initPopout : function(){
             styles+= '.chat-text a:visited {color:#22FF00}';
             styles+= '.chat-text a:hover {color:#EF00FF}';
             styles+= '.chat-text a:active {color:#66FFFF}';
-            styles+= '#volume-bar-value {background-image: url("http://i.imgur.com/HF5pnAR.png")}'; 
+            styles+= '#volume-bar-value {background-image: url("hhttps://dl.dropboxusercontent.com/u/198705975/luminant_volume.png")}'; 
             if (css.styleSheet) css.styleSheet.cssText = styles;
             else css.appendChild(document.createTextNode(styles));
             popout._window.document.head.appendChild(css);
