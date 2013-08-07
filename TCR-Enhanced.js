@@ -291,7 +291,7 @@ initPopout : function(){
                 avatar = new avatar('halloween0'+ i);
              };
         }
-       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/madzomboy/plugbot/master/plugbot.js')}};
+       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/madzomboy/Plugbot/master/plugbot.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"update"}));}}
        if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
 
