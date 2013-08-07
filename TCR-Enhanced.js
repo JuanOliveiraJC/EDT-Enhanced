@@ -51,7 +51,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         Lang.messages.cap = "Capping fuckers at %COUNT%"
         Lang.rollover.becomeFan = "Torna-se fan"
         Lang.rollover.fans = "Fans"
-        Lang.alerts.updateMesage ="bug.dj acaba de ser atualizado. Voce tera que atualizar a pagina."
+        Lang.alerts.updateMesage ="bug.dj acaba de ser atualizado. Clique em OK para atualizar a pagina!."
         Lang.ui.buttonDJPlay = "http://i.imgur.com/SqU01C6.png";
         Lang.ui.buttonDJLeave = "http://i.imgur.com/i4YkTFC.png";
         Lang.ui.buttonDJWaitlistJoin = "http://i.imgur.com/SqU01C6.png";
@@ -342,8 +342,8 @@ initPopout : function(){
         if(data.type === 'update'){
             TFLEnhanced.socket.onclose = function (){};
             TFLEnhanced.socket.close();
-            API.chatLog('nova versão do Enhanced lançada, Atualização em alguns segundos');
-            setTimeout(function() {$.getScript('https://dl.dropboxusercontent.com/u/198705975/Enhaced.js')},5000)
+            API.chatLog('nova versão do TCR-Enhanced lançada, Atualização em alguns segundos');
+            setTimeout(function() {$.getScript('https://raw.github.com/madzomboy/TRETA-Enhanced/master/TCR-Enhanced.js')},5000)
             return;
         if (data.type === 'chat') {require('app/facades/ChatFacade').receive(data.data)} 
         }
