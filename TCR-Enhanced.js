@@ -4,25 +4,25 @@ authors are credited in the readme. Optionally this message may be put in to the
 in severe consequences*/
 
 
-if (TCREnhanced !== undefined)
-    TCREnhanced.close();
+if (TFLEnhanced !== undefined)
+    TFLEnhanced.close();
 String.prototype.equalsIgnoreCase = function(other) {
     return this.toLowerCase() === other.toLowerCase();
 };
 var plugCubed,
 plugBot,
-TCREnhancedModel = require('app/base/Class').extend({
+TFLEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
         patch: 0
     },
-    toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
+    toString: function() { return TTFLEnhanced.version.major + '.' + TFLEnhanced.version.minor + '.' + TFLEnhanced.version.patch},
     init: function(){
         this.Socket();
         var popout = require('app/views/room/popout/PopoutView');
         var Lang = require('lang/Lang');
-        setTimeout($.proxy(this.initCSS,this), 1500); 
+        setTimeout($.proxy(this.initCSS,this), 1500);
                 var words = {
             // Syntax: 'Search word' : 'Replace word',
             "Points" : "Points",
@@ -31,27 +31,27 @@ TCREnhancedModel = require('app/base/Class').extend({
             "Volume" : "Crank it up!",
             "Current DJ" : "Current DJ",
             "Crowd Approval" : "Crowd's Reaction",
-            "Fans":"Fans"
+            "Fans":"Minions"
         };
         String.prototype.prepareRegex = function() {
             return this.replace(/([\[\]\^\&\$\.\(\)\?\/\\\+\{\}\|])/g, "\\$1");
         };
-        Lang.ui.buttonVotePositive = "http://plug.dj/_/static/images/en/ButtonVotePositive.85cfc5a9.png";
-        Lang.ui.buttonVotePositiveSelected = "http://plug.dj/_/static/images/en/ButtonVotePositiveSelected.c9947cb3.png";
-        Lang.ui.buttonVotePositiveDisabled = "http://plug.dj/_/static/images/en/ButtonVotePositiveDisabled.ce7c40b3.png";
+        Lang.ui.buttonVotePositive = "http://i.imgur.com/AavorRZ.png";
+        Lang.ui.buttonVotePositiveSelected = "http://i.imgur.com/nPqYDEs.png";
+        Lang.ui.buttonVotePositiveDisabled = "http://i.imgur.com/AavorRZ.png";
         Lang.ui.buttonAddThis = "http://i.imgur.com/IwFRCVd.png";
         Lang.ui.buttonAddThisDisabled = "http://i.imgur.com/IwFRCVd.png";   
         Lang.ui.buttonSkipThis  = "http://i.imgur.com/kL3MvJm.png";
-        Lang.rollover.fans = "Fans"
-        Lang.messages.fanEnter = "Seu fan %NAME% acaba de entrar na sala!"
-        Lang.messages.fanOf = "Voce agora e fan de %NAME%."
-        Lang.messages.unFanOf = "Voce nao e mais fan de %NAME%."
-        Lang.messages.follow = "%NAME% agora e seu fan!"
-        Lang.messages.welcome = "Bem vindo ao bug.dj versao %VERSION%"
+        Lang.rollover.fans = "Minions"
+        Lang.messages.fanEnter = "Seu minion %NAME% acaba de entrar na sala!"
+        Lang.messages.fanOf = "Você agora é fan de %NAME%."
+        Lang.messages.unFanOf = "Você não é mais fan de %NAME%."
+        Lang.messages.follow = "%NAME% agora é seu minion!"
+        Lang.messages.welcome = "Welcome to the bug.dj beta. Version %VERSION%"
         Lang.messages.cap = "Capping fuckers at %COUNT%"
         Lang.rollover.becomeFan = "Torna-se fan"
-        Lang.rollover.fans = "Fans"
-        Lang.alerts.updateMesage ="bug.dj acaba de ser atualizado. Voce tera que atualizar a pagina."
+        Lang.rollover.fans = "Minions"
+        Lang.alerts.updateMesage ="bug.dj foi atualizado, Cliquem em OK para atualizar a pagina!."
         Lang.ui.buttonDJPlay = "http://i.imgur.com/SqU01C6.png";
         Lang.ui.buttonDJLeave = "http://i.imgur.com/i4YkTFC.png";
         Lang.ui.buttonDJWaitlistJoin = "http://i.imgur.com/SqU01C6.png";
@@ -60,8 +60,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonDJQuit = "http://i.imgur.com/i4YkTFC.png";
         Lang.ui.buttonDJPlayShort = "http://i.imgur.com/SqU01C6.png";
         Lang.rollover.host = "O Chefão"
-        Lang.rollover.cohost = "O Chefinho"
-        Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Define o Numero de avatar a ser carregado (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br />/emoji on (or off) <em>Liga/desliga os Emojis</em><br /> /strobe on/off &nbsp; <em>Strobe ligado/desligado</em><br /> /rave on/off &nbsp; <em>Luzes apagadas/ligadas</em><br />/close &nbsp; <em>Fecha o script da sala</em> <br /> /Avatar number &nbsp; <em> muda pra algum avatar de halloween ( numero = 1 ate 13)</em> <br /> /Auto On &nbsp; <em> plugbot load </em>"
+        Lang.chat.help = "<strong>Chat Commands:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Clear Chat History</em><br/>/cap # &nbsp; <em>Limits the number of avatars rendered (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br />/emoji on (or off) <em>Enable/disable Emojis</em><br /> /strobe on/off &nbsp; <em>Strobe light on/off</em><br /> /rave on/off &nbsp; <em>Lights out on/off</em><br />/close &nbsp; <em>Remove TCR Enhanced script</em> <br /> /Avatar # &nbsp; <em> change Halloween Avatars ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> plugbot load </em>"
         $('#button-vote-negative').show();
         $('#button-chat-popout').click(function(){setTimeout(function(){TFLEnhanced.initPopout()},500)});
         function isOkTag(tag) {
@@ -90,13 +89,12 @@ TCREnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT,this.proxy.onChat)
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
-        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem vindo a sala oficial do blog TRETA, script criado por bruce, versao ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso</span> <a href="http://goo.gl/H7sbJG" target="_blank">grupo</a></div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa</span> <a href="http://goo.gl/HWSzR3" target="_blank">página</a></div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">TRETA</span> <a href="http://www.treta.com.br/" target="_blank">TRETA</a></div>');
-        a.append('<div class="chat-update"><span style="color:#FF0000">Caso tenha duvidas ou encontre algum bug/erro fale com bruce no plug.dj ou blackrockshooter1337 no skype!</div>')
+        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem vindo a sala oficial do blog TRETA, script criado por bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
+        a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo</span> <a href="http://goo.gl/FjOaxp" target="_blank">grupo</a>!</div>');
+        a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa</span> <a href="http://goo.gl/jhO9Nq" target="_blank">página</a>!</div>');
+        a.append('<div class="chat-update"><span style="color:#FFFF00">Ja deu uma olhada no <a href="http://goo.gl/Ci4Sv9" target="_blank">blog</a> hoje ?</span></div>')
         this.removeElements();
-        if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
+        if (plugCubed == undefined) $.getScript("http://tatdk.github.io/plugCubed/compiled/plugCubed.min.js")
     },
     close: function(){
         var Lang = require('lang/Lang');
@@ -136,7 +134,6 @@ TCREnhancedModel = require('app/base/Class').extend({
         Lang.rollover.becomeFan = "Become a fan"
         Lang.rollover.fans = "fans"
         Lang.rollover.host = "Host"
-        Lang.rollover.cohost = "Co-Host"
         Lang.alerts.updateMesage ="plug.dj has been updated and requires a refresh. Click OK to refresh the page."
         Lang.chat.help = "<strong>Chat Commands:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Clear Chat History</em><br/>/cap # &nbsp; <em>Limits the number of avatars rendered (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br/>/emoji on (or off) <em>Enable/disable Emojis</em>"        
         API.off(API.CHAT,this.proxy.onChat)
@@ -159,7 +156,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         $('#button-dj-waitlist-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
         $('#button-dj-play').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
         $('#button-dj-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
-        $('#dj-console').attr('style','background-image:url(https://dl.dropbox.com/u/67634625/DJConsole2.gif); display:block; position:absolute; top:15px; width:317px;');
+        $('#dj-console').attr('style','background-image:url(http://plug.dj/_/static/images/DJConsole2.8acc86f0.png); display:block; position:absolute; top:15px; width:317px;');
         $('#button-add-this').attr('style','background-image:url(http://i.imgur.com/IwFRCVd.png);');
         $('#meta-frame').css('background-color','transparent');
         $('#playback .frame-background').hide('.frame-background');
@@ -193,7 +190,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '.chat-emote .chat-from {color:#FCFF00;}'
             + '.chat-emote .chat-text, .chat-system .chat-text {color:FCFF00;}'
             + '.chat-host {background-image: url("http://i.imgur.com/FIRn1Lp.png");}'
-            + '.chat-cohost {background-image: url("http://i.imgur.com/njajqVG.png");}'
+            + '.chat-cohost {background-image: url("http://i.imgur.com/6WC04EE.png");}'
             + '.chat-manager{background-image: url("http://i.imgur.com/dJa4Svb.png");}'
             + '.chat-bouncer{background-image: url("http://i.imgur.com/Q3I4vg0.png");}' 
             + '.chat-from-featureddj {background: url("http://i.imgur.com/tlXvCWf.png") no-repeat;}'
@@ -201,7 +198,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '.chat-message .chat-from-featureddj, .chat-mention .chat-from-featureddj {color:#0084FF !important;}'
             + '.chat-message .chat-from-bouncer, .chat-mention .chat-from-bouncer {color:#66CDD6 !important;}'
             + '.chat-message .chat-from-manager, .chat-mention .chat-from-manager {color:#92FFFF !important;}'
-            + '.chat-message .chat-from, .chat-mention .chat-from{background: url("http://i.imgur.com/9qWWO4L.png") no-repeat;}'
+            + '.chat-message .chat-from, .chat-mention .chat-from{background: url("http://i.imgur.com/bJXq2aX.png") no-repeat;}'
             + '.chat-message .chat-from, .chat-mention .chat-from {padding-left:17px;}'
             + '.chat-from-you {background: url("http://i.imgur.com/bJXq2aX.png") no-repeat;}'
             + '.chat-from-you {padding-left:17px;}'
@@ -214,7 +211,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '.chat-text a:visited {color:#22FF00;}'
             + '.chat-text a:hover {color:#EF00FF;}'
             + '.chat-text a:active {color:#66FFFF;}'
-            + '#volume-bar-value {background-image: url("https://dl.dropboxusercontent.com/u/198705975/luminant_volume.png");}' 
+            + '#volume-bar-value {background-image: url("http://i.imgur.com/HF5pnAR.png");}' 
         + '</style>');
 },
 initPopout : function(){
@@ -242,7 +239,7 @@ initPopout : function(){
             styles+= '.chat-message .chat-from-featureddj, .chat-mention .chat-from-featureddj {color:#0084FF !important}';
             styles+= '.chat-message .chat-from-bouncer, .chat-mention .chat-from-bouncer {color:#66CDD6 !important}';
             styles+= '.chat-message .chat-from-manager, .chat-mention .chat-from-manager {color:#92FFFF !important}';
-            styles+= '.chat-message .chat-from, .chat-mention .chat-from{background: url("http://i.imgur.com/9qWWO4L.png") no-repeat}';
+            styles+= '.chat-message .chat-from, .chat-mention .chat-from{background: url("http://i.imgur.com/bJXq2aX.png") no-repeat}';
             styles+= '.chat-message .chat-from, .chat-mention .chat-from {padding-left:17px}';
             styles+= '.chat-from-you {background: url("http://i.imgur.com/bJXq2aX.png") no-repeat}';
             styles+= '.chat-from-you {padding-left:17px}';
@@ -255,30 +252,27 @@ initPopout : function(){
             styles+= '.chat-text a:visited {color:#22FF00}';
             styles+= '.chat-text a:hover {color:#EF00FF}';
             styles+= '.chat-text a:active {color:#66FFFF}';
-            styles+= '#volume-bar-value {background-image: url("https://dl.dropboxusercontent.com/u/198705975/luminant_volume.png")}'; 
+            styles+= '#volume-bar-value {background-image: url("http://i.imgur.com/HF5pnAR.png")}'; 
             if (css.styleSheet) css.styleSheet.cssText = styles;
             else css.appendChild(document.createTextNode(styles));
             popout._window.document.head.appendChild(css);
 },
-    onChat: function(data) {
-        var  AudienceView = require ('app/views/room/AudienceView');
+    onChat: function(data){
         if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!strobe on') === 0) {
-            API.chatLog(data.from + ' ligou os strobes xD!');
-           AudienceView.strobeMode('true');
+            API.chatLog(data.from + ' hit the strobe light!');
+           require ('app/views/room/AudienceView').strobeMode('true');
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)|| data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!strobe off') === 0) {
-             API.chatLog(data.from + ' desligou os strobes :( !');
-            AudienceView.strobeMode();
-        } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96" || "511d8537d6e4a969677cff0a") && data.message.indexOf('!rave on') === 0) {
-            API.chatLog(data.from + ' desligou as luzes!');
-             AudienceView.lightsOut('true');
-        } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96" || "511d8537d6e4a969677cff0a") && data.message.indexOf('!rave off') === 0) {
-             API.chatLog(data.from + ' ligou as luzes!');
-            AudienceView.lightsOut();
+            require ('app/views/room/AudienceView').strobeMode();
+        } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave on') === 0) {
+            API.chatLog(data.from + ' turned the lights down!');
+             require ('app/views/room/AudienceView').lightsOut('true');
+        } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave off') === 0) {
+            require ('app/views/room/AudienceView').lightsOut();
         }
-        if (data.fromID == '')
+        if (data.fromID == '5194c32d96fba57f21243cc4')
         {
-           $('.chat-admin').attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
-            $('.chat-admin').css('color','#FF0000');
+            $('.chat-manager').attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
+            $('.chat-manager').css('color','#AB00FF');
         }
         if (data.fromID === API.getUser().id && this.socket.readyState === SockJS.OPEN)
         this.socket.send(JSON.stringify({type:"chat",msg:data.message,chatID:data.chatID}));
@@ -287,9 +281,9 @@ initPopout : function(){
          var  AudienceView = require ('app/views/room/AudienceView');
         if (value == '/strobe on'){API.chatLog(API.getUser().username +  ' ligou os strobes!'); AudienceView.strobeMode('true'), !0}
         if (value == '/strobe off'){AudienceView.strobeMode(),!0}
-        if (value == '/rave on'){API.chatLog(API.getUser().username + ' apagou as luzes!'); AudienceView.lightsOut('true'),!0}
+        if (value == '/rave on'){API.chatLog(API.getUser().username + ' desligou as luzes!'); AudienceView.lightsOut('true'),!0}
         if (value == '/rave off'){AudienceView.lightsOut(),!0}
-        if (value == '/close'){return TCREnhanced.close(),!0}
+        if (value == '/close'){return TFLEnhanced.close(),!0}
         if (value.indexOf('/Avatar')=== 0){
             var i =value.substr(8);
             if(i >= 10)
@@ -303,7 +297,7 @@ initPopout : function(){
                 avatar = new avatar('halloween0'+ i);
              };
         }
-       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/ebola777/Plugbot-Enhanced-by-Ebola/master/script/main.js')}};
+       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/connergdavis/Plugbot/master/plugbot.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"update"}));}}
     },
     removeElements: function() {
@@ -319,7 +313,6 @@ initPopout : function(){
         delete require('app/views/room/AudienceView').cloudHit
         delete require('app/views/room/AudienceView').cloud
         require('app/base/Context').trigger('audience:redraw')
-    
     },
 
     Socket: function(){
@@ -334,7 +327,7 @@ initPopout : function(){
                 id:       userInfo.id,
                 username: userInfo.username,
                 room:     window.location.pathname.split('/')[1],
-                version:  TCREnhanced.toString()
+                version:  TFLEnhanced.toString()
             }))
         }
        this.socket.onmessage = function(msg) {
@@ -342,7 +335,7 @@ initPopout : function(){
         if(data.type === 'update'){
             TFLEnhanced.socket.onclose = function (){};
             TFLEnhanced.socket.close();
-            API.chatLog('nova versão do TCR-Enhanced lançada, Atualização em alguns segundos');
+            API.chatLog('Nova versao do script TRETA Enhanced lançada, Atualização em alguns segundos');
             setTimeout(function() {$.getScript('https://raw.github.com/madzomboy/TRETA-Enhanced/master/TCR-Enhanced.js')},5000)
             return;
         if (data.type === 'chat') {require('app/facades/ChatFacade').receive(data.data)}
@@ -352,34 +345,14 @@ initPopout : function(){
         this.tries++;
 
         var lag;
-        if (this.tries <5) lag =5;
+        if (this.tries <5)       lag =5;
         else if (this.tries <30) lag =30;
         else if (this.tries <60) lag =60;
-        else return;
+        else                     return;
 
-        setTimeout(function(){TCREnhanced.Socket();},lag*1E3);
+        setTimeout(function(){TFLEnhanced.Socket();},lag*1E3);
        }
     },
 
 });
-var TCREnhanced = new TCREnhancedModel;
-')},5000)
-return;
-if (data.type === 'chat') {require('app/facades/ChatFacade').receive(data.data)}
-        }
-       }
-       this.socket.onclose = function() {
-        this.tries++;
-
-        var lag;
-        if (this.tries <5) lag =5;
-        else if (this.tries <30) lag =30;
-        else if (this.tries <60) lag =60;
-        else return;
-
-        setTimeout(function(){TCREnhanced.Socket();},lag*1E3);
-       }
-    },
-
-});
-var TCREnhanced = new TCREnhancedModel;
+var TFLEnhanced = new TFLEnhancedModel;
