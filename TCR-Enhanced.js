@@ -1,9 +1,3 @@
-/* Created by Colgate and thedark1337. Please ask for permission before using this code. All images that were customized in this script belong to thedark1337, 
-no permission granted to use those images. Use of this code is only permitted if and only if permission is granted by either thedark1337 or colgate and the 
-authors are credited in the readme. Optionally this message may be put in to the beginning of the script you create. Failure to comply will result
-in severe consequences*/
-
-
 if (TFLEnhanced !== undefined)
     TFLEnhanced.close();
 String.prototype.equalsIgnoreCase = function(other) {
