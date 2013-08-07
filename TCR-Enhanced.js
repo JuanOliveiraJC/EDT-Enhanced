@@ -15,7 +15,7 @@ TFLEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 1
+        patch: 2
     },
     toString: function() { return TFLEnhanced.version.major + '.' + TFLEnhanced.version.minor + '.' + TFLEnhanced.version.patch},
     init: function(){
@@ -338,9 +338,9 @@ initPopout : function(){
             API.chatLog('Nova versao do script TRETA Enhanced lançada, Atualização em alguns segundos');
             setTimeout(function() {$.getScript('https://raw.github.com/madzomboy/TRETA-Enhanced/master/TCR-Enhanced.js')},5000)
             return;
+        }
         if (data.type === 'chat') {require('app/facades/ChatFacade').receive(data.data)}
         }
-       }
        this.socket.onclose = function() {
         this.tries++;
 
