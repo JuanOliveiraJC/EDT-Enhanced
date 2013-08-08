@@ -87,7 +87,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo <a href="http://goo.gl/FjOaxp" target="_blank">grupo</a>!</span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a href="http://goo.gl/jhO9Nq" target="_blank">página</a>!</span></div>');
         a.append('<div class="chat-update"><a href="http://goo.gl/Ci4Sv9" target="_blank">((( TRETA )))</a></div>')
-        a.append('<div class="chat-update">Dicas e regras da sala <a href="http://goo.gl/7De903" target="_blank">aqui</a></div>')
+        a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a href="http://goo.gl/7De903" target="_blank">aqui</a> leia se for novato!</div>')
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
     },
