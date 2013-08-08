@@ -1,17 +1,17 @@
-if (TFLEnhanced !== undefined)
-    TFLEnhanced.close();
+if (TCREnhanced !== undefined)
+    TCREnhanced.close();
 String.prototype.equalsIgnoreCase = function(other) {
     return this.toLowerCase() === other.toLowerCase();
 };
 var plugCubed,
 plugBot,
-TFLEnhancedModel = require('app/base/Class').extend({
+TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 3
+        patch: 4
     },
-    toString: function() { return TFLEnhanced.version.major + '.' + TFLEnhanced.version.minor + '.' + TFLEnhanced.version.patch},
+    toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
         this.Socket();
         var popout = require('app/views/room/popout/PopoutView');
@@ -56,7 +56,7 @@ TFLEnhancedModel = require('app/base/Class').extend({
         Lang.rollover.host = "O Chefão"
         Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Limpa todo o chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatars a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br />/emoji on (or off) <em>Enable/disable Emojis</em><br /> /strobe on/off &nbsp; <em>Strobe light on/off</em><br /> /rave on/off &nbsp; <em>Lights out on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda para um avatar de Halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> plugbot load </em>"
         $('#button-vote-negative').show();
-        $('#button-chat-popout').click(function(){setTimeout(function(){TFLEnhanced.initPopout()},500)});
+        $('#button-chat-popout').click(function(){setTimeout(function(){TCREnhanced.initPopout()},500)});
         function isOkTag(tag) {
             return (",pre,blockquote,code,input,button,textarea".indexOf(","+tag) == -1);
         };
@@ -92,7 +92,7 @@ TFLEnhancedModel = require('app/base/Class').extend({
     },
     close: function(){
         var Lang = require('lang/Lang');
-        $('#TFL-css').remove();
+        $('#TCR-css').remove();
         $('#room-wheel').css('background','url("http://plug.dj/_/static/images/room_wheel2.0ea1fb92.png")');
         $('#button-vote-negative').show();
         $('#button-dj-waitlist-join').attr('style','background-image:url(http://plug.dj/_/static/images/en/ButtonDJWaitListJoin.fbffc481.png); display: block;');
@@ -157,7 +157,7 @@ TFLEnhancedModel = require('app/base/Class').extend({
         $('#playback').css('background-color','transparent');
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
-            + '<style type="text/css" id="TFL-css">'
+            + '<style type="text/css" id="TCR-css">'
             + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/treta_background.png") no-repeat scroll center top #000000;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/ButtonLobby_luminant.png");}'
             + 'body {color:#66FFFF;}'
@@ -263,7 +263,7 @@ initPopout : function(){
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave off') === 0) {
             require ('app/views/room/AudienceView').lightsOut();
         }
-        if (data.fromID == '5194c32d96fba57f21243cc4')
+        if (data.fromID == '50b1961c96fba57db2230417')
         {
             $('.chat-manager').attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
             $('.chat-manager').css('color','#AB00FF');
@@ -277,7 +277,7 @@ initPopout : function(){
         if (value == '/strobe off'){AudienceView.strobeMode(),!0}
         if (value == '/rave on'){API.chatLog(API.getUser().username + ' desligou as luzes!'); AudienceView.lightsOut('true'),!0}
         if (value == '/rave off'){AudienceView.lightsOut(),!0}
-        if (value == '/close'){return TFLEnhanced.close(),!0}
+        if (value == '/close'){return TCREnhanced.close(),!0}
         if (value.indexOf('/Avatar')=== 0){
             var i =value.substr(8);
             if(i >= 10)
@@ -292,10 +292,10 @@ initPopout : function(){
              };
         }
        if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/madzomboy/Plugbot/master/plugbot.js')}};
-       if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"update"}));}}
-       if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
-       if (value =='/strobeon'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));}}
-       if (value =='/strobeoff'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}));}} 
+       if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"update"}));}}
+       if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"reload"}));}}
+       if (value =='/strobeon'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));}}
+       if (value =='/strobeoff'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}));}} 
 
     },
     removeElements: function() {
@@ -325,14 +325,14 @@ initPopout : function(){
                 id:       userInfo.id,
                 username: userInfo.username,
                 room:     window.location.pathname.split('/')[1],
-                version:  TFLEnhanced.toString()
+                version:  TCREnhanced.toString()
             }))
         }
        this.socket.onmessage = function(msg) {
         var data = JSON.parse(msg.data);
         if(data.type === 'update'){
-            TFLEnhanced.socket.onclose = function (){};
-            TFLEnhanced.socket.close();
+            TCREnhanced.socket.onclose = function (){};
+            TCREnhanced.socket.close();
             API.chatLog('Nova versao do script TRETA Enhanced lançada, Atualização em alguns segundos');
             setTimeout(function() {$.getScript('https://raw.github.com/madzomboy/TRETA-Enhanced/master/TCR-Enhanced.js')},5000)
             return;
@@ -356,9 +356,9 @@ initPopout : function(){
         else if (this.tries <60) lag =60;
         else                     return;
 
-        setTimeout(function(){TFLEnhanced.Socket();},lag*1E3);
+        setTimeout(function(){TCREnhanced.Socket();},lag*1E3);
        }
     },
 
 });
-var TFLEnhanced = new TFLEnhancedModel;
+var TCREnhanced = new TCREnhancedModel;
