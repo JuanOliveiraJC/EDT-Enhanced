@@ -9,7 +9,7 @@ TFLEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 2
+        patch: 3
     },
     toString: function() { return TFLEnhanced.version.major + '.' + TFLEnhanced.version.minor + '.' + TFLEnhanced.version.patch},
     init: function(){
@@ -294,6 +294,8 @@ initPopout : function(){
        if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/madzomboy/Plugbot/master/plugbot.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"update"}));}}
        if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
+       if (value =='/strobeon'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));}}
+       if (value =='/strobeoff'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){TFLEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}));}} 
 
     },
     removeElements: function() {
@@ -336,9 +338,14 @@ initPopout : function(){
             return;
         }
         if(data.type === 'reload'){
-            API.chatLog('recarregando o TRETA-Enhanced para todos os usuarios.')
             location.reload();
-        } 
+        }
+        if(data.type ==='strobe'){
+            if(data.trigger =='true')
+                { require ('app/views/room/AudienceView').strobeMode('true')}
+            if(data.trigger =='false')
+                { require ('app/views/room/AudienceView').strobeMode()}
+        }
         }
        this.socket.onclose = function() {
         this.tries++;
