@@ -84,9 +84,10 @@ TCREnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem vindo a sala oficial do blog TRETA, script criado por bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
+        a.append('<div class="chat-update"<strong><span class="chat-text" style="color:#FF0000">Jogos mortais <a href="http://on.fb.me/13JzOge" target="_blank">HOJE</a> MUAHAHAHAHAHA</span></strong></div>')
         a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo <a href="http://goo.gl/FjOaxp" target="_blank">grupo</a>!</span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a href="http://goo.gl/jhO9Nq" target="_blank">página</a>!</span></div>');
-        a.append('<div class="chat-update"><a href="http://goo.gl/Ci4Sv9" target="_blank">((( TRETA )))</a></div>')
+        a.append('<div class="chat-update"><a href="http://goo.gl/Ci4Sv9" target="_blank">((( TRETA )))</a></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a href="http://goo.gl/7De903" target="_blank">aqui</a> leia se for novato!</div>')
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
