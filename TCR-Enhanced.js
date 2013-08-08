@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 4
+        patch: 5
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -296,9 +296,18 @@ initPopout : function(){
        if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/madzomboy/Plugbot/master/plugbot.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"update"}));}}
        if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"reload"}));}}
-       if (value =='/strobeon'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));}}
-       if (value =='/strobeoff'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}));}} 
-
+       if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
+        if(value.substr(9) == 'on'){
+        TFLEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));
+        }
+        if(value.substr(9)== 'off'){TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}))}
+        }
+    }
+      if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
+         var msg = value.substr(11);
+         TCREnhanced.socket.send(JSON.stringify({type:"broadcast",message:msg}))
+            }
+        } 
     },
     removeElements: function() {
         require('app/views/room/AudienceView').initRoomElements = function() {}
@@ -348,6 +357,10 @@ initPopout : function(){
             if(data.trigger =='false')
                 { require ('app/views/room/AudienceView').strobeMode()}
         }
+        if(data.type ==='broadcast')
+        {
+            require('app/facades/ChatFacade').log(data.message,'update');
+        } 
         }
        this.socket.onclose = function() {
         this.tries++;
