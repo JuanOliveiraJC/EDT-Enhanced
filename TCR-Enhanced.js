@@ -267,7 +267,7 @@ initPopout : function(){
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave off') === 0) {
             require ('app/views/room/AudienceView').lightsOut();
         }
-        if (data.fromID == '5105e7a23e083e5100cc1d96')
+        if (data.fromID == '50b1961c96fba57db2230417')
         {
             $('.chat-featureddj').attr('style','background-image:url(http://i.imgur.com/FIRn1Lp.png);');
             $('.chat-featureddj').css('color','#00FF00');
@@ -298,7 +298,7 @@ initPopout : function(){
        if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/madzomboy/Plugbot/master/plugbot.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"update"}));}}
        if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){TCREnhanced.socket.send(JSON.stringify({type:"reload"}));}}
-       if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
+       if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
         if(value.substr(9) == 'on'){
         TFLEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));
         }
