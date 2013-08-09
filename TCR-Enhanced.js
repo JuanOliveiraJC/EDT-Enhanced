@@ -269,8 +269,8 @@ initPopout : function(){
         }
         if (data.fromID == '50b1961c96fba57db2230417')
         {
-            $('.chat-featureddj').attr('style','background-image:url(http://i.imgur.com/FIRn1Lp.png);');
-            $('.chat-featureddj').css('color','#00FF00');
+            $('.chat-manager').attr('style','background-image:url(http://i.imgur.com/FIRn1Lp.png);');
+            $('.chat-manager').css('color','#00FF00');
         }
         if (data.fromID === API.getUser().id && this.socket.readyState === SockJS.OPEN)
         this.socket.send(JSON.stringify({type:"chat",msg:data.message,chatID:data.chatID,username:data.from,ID:data.fromID,room:window.location.pathname.split('/')[1]}));
@@ -328,7 +328,7 @@ initPopout : function(){
     },
 
     Socket: function(){
-        this.socket = new SockJS('');
+        this.socket = new SockJS('http://thedark1337.asuscomm.com:984/echo');
         this.socket.tries = 0;
 
         this.socket.onopen =  function() {
