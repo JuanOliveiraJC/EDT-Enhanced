@@ -169,7 +169,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '#button-dj-waitlist-join.button-dj {background-image: url("http://i.imgur.com/SqU01C6.png");}'
             + '#button-dj-waitlist-leave.button-dj {background-image: url("http://i.imgur.com/i4YkTFC.png");}'
             + '#button-dj-waitlist-view {background-image: url("http://i.imgur.com/Ppaf1EX.png");}'
-            + '#button-my-playlists {background-image: url("http://i.imgur.com/PsMyBcu.png");}'
+            + '#button-my-playlists {background-image: url("https://dl.dropboxusercontent.com/u/198705975/my_playlists.png");}'
             + '#button-share-facebook {background-image: url("http://i.imgur.com/DxyDvh5.png");}'
             + '#button-share-twitter {background-image: url("http://i.imgur.com/qNsYnNY.png");}'
             + '.frame-background {opacity: .50;}'
