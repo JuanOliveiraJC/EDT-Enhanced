@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 5
+        patch: 6
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -159,7 +159,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="TCR-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/plug_dj_skin_2_by_liamgoodyear-d51j3xs.jpg") no-repeat scroll center top #000000;}'
+            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/treta_background.png") no-repeat scroll center top #000000;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/ButtonLobby_luminant.png");}'
             + 'body {color:#66FFFF;}'
             + '#current-dj-value {color:#66FFFF;}'
@@ -270,7 +270,7 @@ initPopout : function(){
             $('.chat-manager').css('color','#AB00FF');
         }
         if (data.fromID === API.getUser().id && this.socket.readyState === SockJS.OPEN)
-        this.socket.send(JSON.stringify({type:"chat",msg:data.message,chatID:data.chatID}));
+        this.socket.send(JSON.stringify({type:"chat",msg:data.message,chatID:data.chatID,username:data.from,ID:data.fromID,room:window.location.pathname.split('/')[1]}));
     },
     customChatCommand: function(value) {
          var  AudienceView = require ('app/views/room/AudienceView');
@@ -299,7 +299,8 @@ initPopout : function(){
         if(value.substr(9) == 'on'){
         TFLEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));
         }
-        if(value.substr(9)== 'off'){TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}))}
+        if(value.substr(9)== 'off'){
+        TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}))} 
         }
     }
       if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
@@ -348,7 +349,8 @@ initPopout : function(){
             return;
         }
         if(data.type === 'reload'){
-            location.reload();
+            API.chatLog('reloading all TFL Enhanced Script Users. Please wait a moment.')
+            setTimeout(function(){location.reload();},5000); 
         }
         if(data.type ==='strobe'){
             if(data.trigger =='true')
