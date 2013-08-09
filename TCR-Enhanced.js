@@ -160,7 +160,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="TCR-css">'
             + 'html{background: url("http://i.imgur.com/Z3cGh.png") no-repeat scroll center top #000000;}'
-            + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/ButtonLobby_luminant.png");}'
+            + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
             + 'body {color:#66FFFF;}'
             + '#current-dj-value {color:#66FFFF;}'
             + '.chat-title {font-family: "Faster One", cursive;}'
