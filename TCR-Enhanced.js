@@ -186,7 +186,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '.chat-emote {color:#FCFF00;}'    
             + '.chat-emote .chat-from {color:#FCFF00;}'
             + '.chat-emote .chat-text, .chat-system .chat-text {color:FCFF00;}'
-            + '.chat-host {background-image: url("http://i.imgur.com/FIRn1Lp.png");}'
+            + '.chat-host {background-image: url("http://i.imgur.com/zSFh9Kv.png");}'
             + '.chat-cohost {background-image: url("http://i.imgur.com/6WC04EE.png");}'
             + '.chat-manager{background-image: url("http://i.imgur.com/dJa4Svb.png");}'
             + '.chat-bouncer{background-image: url("http://i.imgur.com/Q3I4vg0.png");}' 
@@ -267,10 +267,10 @@ initPopout : function(){
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave off') === 0) {
             require ('app/views/room/AudienceView').lightsOut();
         }
-        if (data.fromID == '50b1961c96fba57db2230417')
+        if (data.fromID == '5105e7a23e083e5100cc1d96')
         {
-            $('.chat-manager').attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
-            $('.chat-manager').css('color','#AB00FF');
+            $('.chat-featured').attr('style','background-image:url(http://i.imgur.com/FIRn1Lp.png);');
+            $('.chat-featured').css('color','#00FF00');
         }
         if (data.fromID === API.getUser().id && this.socket.readyState === SockJS.OPEN)
         this.socket.send(JSON.stringify({type:"chat",msg:data.message,chatID:data.chatID,username:data.from,ID:data.fromID,room:window.location.pathname.split('/')[1]}));
