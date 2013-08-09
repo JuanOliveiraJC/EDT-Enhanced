@@ -351,7 +351,7 @@ initPopout : function(){
             return;
         }
         if(data.type === 'reload'){
-            API.chatLog('reloading all TFL Enhanced Script Users. Please wait a moment.')
+            API.chatLog('recarregando o script TCR de todos os usuarios. Espere um momento')
             setTimeout(function(){location.reload();},5000); 
         }
         if(data.type ==='strobe'){
