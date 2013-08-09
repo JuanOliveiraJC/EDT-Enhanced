@@ -54,7 +54,6 @@ TCREnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonDJQuit = "http://i.imgur.com/i4YkTFC.png";
         Lang.ui.buttonDJPlayShort = "http://i.imgur.com/SqU01C6.png";
         Lang.rollover.host = "O Chefão"
-        Lang.rollover.userPointsIcon = "https://dl.dropboxusercontent.com/u/198705975/shining_armor_cutie_mark.png"
         Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Limpa todo o chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatars a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br />/emoji on (or off) <em>Enable/disable Emojis</em><br /> /strobe on/off &nbsp; <em>Strobe light on/off</em><br /> /rave on/off &nbsp; <em>Lights out on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda para um avatar de Halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> plugbot load </em>"
         $('#button-vote-negative').show();
         $('#button-chat-popout').click(function(){setTimeout(function(){TCREnhanced.initPopout()},500)});
@@ -130,7 +129,6 @@ TCREnhancedModel = require('app/base/Class').extend({
         Lang.rollover.becomeFan = "Become a fan"
         Lang.rollover.fans = "fans"
         Lang.rollover.host = "Host"
-        Lang.rollover.userPointsIcon = "http://plug.dj/_/static/images/user_points_icon.feff014.png"
         Lang.alerts.updateMesage ="plug.dj has been updated and requires a refresh. Click OK to refresh the page."
         Lang.chat.help = "<strong>Chat Commands:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Clear Chat History</em><br/>/cap # &nbsp; <em>Limits the number of avatars rendered (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br/>/emoji on (or off) <em>Enable/disable Emojis</em>"        
         API.off(API.CHAT,this.proxy.onChat)
