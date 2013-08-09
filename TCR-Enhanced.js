@@ -159,7 +159,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="TCR-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/treta_background.png") no-repeat scroll center top #000000;}'
+            + 'html{background: url("http://i.imgur.com/Z3cGh.png") no-repeat scroll center top #000000;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/ButtonLobby_luminant.png");}'
             + 'body {color:#66FFFF;}'
             + '#current-dj-value {color:#66FFFF;}'
