@@ -328,7 +328,7 @@ initPopout : function(){
     },
 
     Socket: function(){
-        this.socket = new SockJS('http://thedark1337.asuscomm.com:984/echo');
+        this.socket = new SockJS('');
         this.socket.tries = 0;
 
         this.socket.onopen =  function() {
