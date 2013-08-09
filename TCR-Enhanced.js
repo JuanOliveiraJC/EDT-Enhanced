@@ -260,11 +260,13 @@ initPopout : function(){
             API.chatLog(data.from + ' ligou os strobes!');
            require ('app/views/room/AudienceView').strobeMode('true');
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)|| data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!strobe off') === 0) {
+            API.chatLog(dafa.from + ' desligou os strobes!')
             require ('app/views/room/AudienceView').strobeMode();
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave on') === 0) {
             API.chatLog(data.from + ' desligou as luzes!');
              require ('app/views/room/AudienceView').lightsOut('true');
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave off') === 0) {
+            API.chatLog(data.from + ' acendeu as luzes!')
             require ('app/views/room/AudienceView').lightsOut();
         }
         if (data.fromID == '50b1961c96fba57db2230417')
