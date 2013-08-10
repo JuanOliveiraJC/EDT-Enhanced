@@ -256,16 +256,16 @@ initPopout : function(){
             popout._window.document.head.appendChild(css);
 },
     onChat: function(data){
-        if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!strobe on') === 0) {
+        if (data.type == 'message' && (API.hasPermission(data.fromID)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!strobe on') === 0) {
             API.chatLog(data.from + ' ligou os strobes!');
            require ('app/views/room/AudienceView').strobeMode('true');
-        } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)|| data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!strobe off') === 0) {
+        } else if (data.type == 'message' && (API.hasPermission(data.fromID)|| data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!strobe off') === 0) {
             API.chatLog(dafa.from + ' desligou os strobes!')
             require ('app/views/room/AudienceView').strobeMode();
-        } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!rave on') === 0) {
+        } else if (data.type == 'message' && (API.hasPermission(data.fromID)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!rave on') === 0) {
             API.chatLog(data.from + ' desligou as luzes!');
              require ('app/views/room/AudienceView').lightsOut('true');
-        } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!rave off') === 0) {
+        } else if (data.type == 'message' && (API.hasPermission(data.fromID)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!rave off') === 0) {
             API.chatLog(data.from + ' acendeu as luzes!')
             require ('app/views/room/AudienceView').lightsOut();
         }
@@ -280,9 +280,9 @@ initPopout : function(){
     customChatCommand: function(value) {
          var  AudienceView = require ('app/views/room/AudienceView');
         if (value == '/strobe on'){API.chatLog(API.getUser().username +  ' ligou os strobes!'); AudienceView.strobeMode('true'), !0}
-        if (value == '/strobe off'){AudienceView.strobeMode(),!0}
+        if (value == '/strobe off'){API.chatLog(API.getUser().username + ' desligou os strobes!'); AudienceView.strobeMode(),!0}
         if (value == '/rave on'){API.chatLog(API.getUser().username + ' desligou as luzes!'); AudienceView.lightsOut('true'),!0}
-        if (value == '/rave off'){AudienceView.lightsOut(),!0}
+        if (value == '/rave off'){API.chatLog(API.getUser(.username + ' acendeu as luzes!')) AudienceView.lightsOut(),!0}
         if (value == '/close'){return TCREnhanced.close(),!0}
         if (value.indexOf('/Avatar')=== 0){
             var i =value.substr(8);
