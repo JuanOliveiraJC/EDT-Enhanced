@@ -84,7 +84,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem vindo a sala oficial do blog TRETA, script criado por bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
-        a.append('<div class="chat-update"><span style="color:#FF1493"><i>Esse <a target="_blank" href="http://goo.gl/sDvkVt" title="Mostra o que é">final de semana</a> vai ser ponificado com background de ponei xD</i></span></div>');
+        a.append('<div class="chat-update"><span style="color:#FF1493"><i>Esse <a target="_blank" href="http://goo.gl/sDvkVt" title="Clica pra saber como funciona!>final de semana</a> vai ser ponificado com background de ponei xD</i></span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo <a target="_blank" href="http://goo.gl/FjOaxp" title="Rola altas tretas aqui">grupo</a>!</span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a target="_blank" href="http://goo.gl/jhO9Nq" title="Ta esperando o que pra curtir ?!">página</a>!</span></div>');
         a.append('<div class="chat-update"><a target="_blank" href="http://www.treta.com.br" title="Mete o dedo na tomada!">((( TRETA )))</a></div>');
