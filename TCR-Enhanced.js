@@ -90,7 +90,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-update"><a target="_blank" href="http://www.treta.com.br" title="Mete o dedo na tomada!">((( TRETA )))</a></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a  target="_blank" href="http://goo.gl/7De903" title="Clica logo">aqui</a> leia se for novato!</div>')
         this.removeElements();
-        if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
+        if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.js")
     },
     close: function(){
         var Lang = require('lang/Lang');
