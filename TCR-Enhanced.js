@@ -308,7 +308,7 @@ initPopout : function(){
         TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}))} 
         }
     }
-      if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
+      if (value.indexOf('/broadcast')===0){if(API.hasPermission(data.fromID,API.ROLE.HOST)  || data.fromID == '517ae5da3e083e15c2f91980'){
          var msg = value.substr(11);
             }
         } 
