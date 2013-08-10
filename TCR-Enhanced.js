@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 7
+        patch: 8
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -91,6 +91,13 @@ TCREnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a  target="_blank" href="http://goo.gl/7De903" title="Clica logo">aqui</a> leia se for novato!</div>')
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.js")
+                    window.alert = function(data){window.alert = function(data) {
+            var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
+            a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><strong>[Window Alert]</strong></span><span style="color:#FFFFFF"> : ' + data + '</span></div>'); 
+            TFLEnhanced.socket.send(JSON.stringify({type:"disconnect",msg:data,Username:API.getUser().username,Room:window.location.pathname.split('/')[1]}));
+
+            };
+        } 
     },
     close: function(){
         var Lang = require('lang/Lang');
@@ -185,7 +192,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '.chat-host {color:#4CFF00;}'
             + '.chat-emote {color:#FCFF00;}'    
             + '.chat-emote .chat-from {color:#FCFF00;}'
-            + '.chat-emote .chat-text, .chat-system .chat-text {color:FCFF00;}'
+            + '.chat-emote .chat-text, .chat-system .chat-text {color:#FCFF00;}'
             + '.chat-host {background-image: url("http://i.imgur.com/zSFh9Kv.png");}'
             + '.chat-cohost {background-image: url("http://i.imgur.com/6WC04EE.png");}'
             + '.chat-manager{background-image: url("http://i.imgur.com/dJa4Svb.png");}'
@@ -226,7 +233,7 @@ initPopout : function(){
             styles+= '.chat-host {color:#4CFF00}';
             styles+= '.chat-emote {color:#FCFF00}';    
             styles+= '.chat-emote .chat-from {color:#FCFF00}';
-            styles+= '.chat-emote .chat-text, .chat-system .chat-text {color:FCFF00}';
+            styles+= '.chat-emote .chat-text, .chat-system .chat-text {color:#FCFF00}';
             + '#user-container .frame-background {opacity: 1;}'
             styles+= '.chat-host {background-image: url("http://i.imgur.com/FIRn1Lp.png")}';
             styles+= '.chat-cohost {background-image: url("http://i.imgur.com/f5VVDSz.png")}';
