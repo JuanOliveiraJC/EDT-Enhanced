@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 8
+        patch: 9
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -89,13 +89,14 @@ TCREnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a target="_blank" href="http://goo.gl/jhO9Nq" title="Ta esperando o que pra curtir ?!">página</a>!</span></div>');
         a.append('<div class="chat-update"><a target="_blank" href="http://www.treta.com.br" title="Mete o dedo na tomada!">((( TRETA )))</a></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a  target="_blank" href="http://goo.gl/7De903" title="Clica logo">aqui</a> leia se for novato!</div>')
+         b && a.scrollTop(a[0].scrollHeight); 
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.js")
                     window.alert = function(data){window.alert = function(data) {
             var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
-            a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><strong>[Window Alert]</strong></span><span style="color:#FFFFFF"> : ' + data + '</span></div>'); 
-            TFLEnhanced.socket.send(JSON.stringify({type:"disconnect",msg:data,Username:API.getUser().username,Room:window.location.pathname.split('/')[1]}));
-
+            a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><strong>[Window Alert]</strong></span><span style="color:#FFFFFF"> : ' + data + '</span></div>');
+            b && a.scrollTop(a[0].scrollHeight); 
+            TCREnhanced.socket.send(JSON.stringify({type:"disconnect",msg:data,Username:API.getUser().username,Room:window.location.pathname.split('/')[1]}));
             };
         } 
     },
