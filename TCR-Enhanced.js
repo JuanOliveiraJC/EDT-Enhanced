@@ -282,7 +282,7 @@ initPopout : function(){
         if (value == '/strobe on'){API.chatLog(API.getUser().username +  ' ligou os strobes!'); AudienceView.strobeMode('true'), !0}
         if (value == '/strobe off'){API.chatLog(API.getUser().username + ' desligou os strobes!'); AudienceView.strobeMode(),!0}
         if (value == '/rave on'){API.chatLog(API.getUser().username + ' desligou as luzes!'); AudienceView.lightsOut('true'),!0}
-        if (value == '/rave off'){API.chatLog(API.getUser(.username + ' acendeu as luzes!')) AudienceView.lightsOut(),!0}
+        if (value == '/rave off'){API.chatLog(API.getUser(.username + ' acendeu as luzes!'); AudienceView.lightsOut(),!0}
         if (value == '/close'){return TCREnhanced.close(),!0}
         if (value.indexOf('/Avatar')=== 0){
             var i =value.substr(8);
