@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 0,
-        patch: 6
+        patch: 7
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -162,7 +162,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '<style type="text/css" id="TCR-css">'
             + 'html{background: url("http://dl.dropbox.com/u/61594284/Plug.Pony%20Backgrounds/RD.png") no-repeat scroll center top #050505;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
-            + 'body {color:#66FFFF;}'
+            + 'body {color:#EEEE00;}'
             + '#current-dj-value {color:#66FFFF;}'
             + '.chat-title {font-family: "Faster One", cursive;}'
             + '#button-dj-play.button-dj {background-image: url("http://i.imgur.com/SqU01C6.png");}'
