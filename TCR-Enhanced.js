@@ -268,7 +268,7 @@ initPopout : function(){
             API.chatLog(dafa.from + ' desligou os strobes!')
             require ('app/views/room/AudienceView').strobeMode();
         } else if (data.type == 'message' && (API.hasPermission(data.fromID)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!rave on') === 0) {
-            API.chatLog(data.from + ' desligou as luzes!');
+            API.chatLog(data.from + ' apagou as luzes!');
              require ('app/views/room/AudienceView').lightsOut('true');
         } else if (data.type == 'message' && (API.hasPermission(data.fromID)  || data.fromID == "5105e7a23e083e5100cc1d96" || "517ae5da3e083e15c2f91980") && data.message.indexOf('!rave off') === 0) {
             API.chatLog(data.from + ' acendeu as luzes!')
