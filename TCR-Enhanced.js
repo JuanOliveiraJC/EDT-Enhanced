@@ -180,7 +180,7 @@ TCREnhancedModel = require('app/base/Class').extend({
             + '#button-share-twitter {background-image: url("https://dl.dropboxusercontent.com/u/198705975/tt.png");}'
             + '.frame-background {opacity: .50;}'
             + '#button-refresh {background-image: url("http://i.imgur.com/Do13WJg.png");}'
-            + '#button-hd-on {background-image: url("http://i.imgur.com/gEh7chb.png");}'
+            + '#button-hd-on {background-image: url("http://i.imgur.com/hGm8B4Y.png");}'
             + '#button-hd-off {background-image: url("http://i.imgur.com/4xvCfmv.png");}'
             + '#current-dj-value {color:#66FFFF;}'
             + '#now-playing-value{color:#66FFFF;}'
