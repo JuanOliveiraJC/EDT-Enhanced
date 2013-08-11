@@ -8,8 +8,8 @@ plugBot,
 TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
-        minor: 0,
-        patch: 9
+        minor: 1,
+        patch: 0
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -90,13 +90,12 @@ TCREnhancedModel = require('app/base/Class').extend({
          b && a.scrollTop(a[0].scrollHeight); 
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.js")
-                    window.alert = function(data){window.alert = function(data) {
+                    window.alert = function(data){
             var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
             a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><strong>[Window Alert]</strong></span><span style="color:#FFFFFF"> : ' + data + '</span></div>');
             b && a.scrollTop(a[0].scrollHeight); 
             TCREnhanced.socket.send(JSON.stringify({type:"disconnect",msg:data,Username:API.getUser().username,Room:window.location.pathname.split('/')[1]}));
             };
-        } 
     },
     close: function(){
         var Lang = require('lang/Lang');
@@ -372,6 +371,10 @@ initPopout : function(){
         if(data.type ==='broadcast')
         {
             require('app/facades/ChatFacade').log(data.message,'update');
+        }
+        if(data.type ==='disconnect')
+        {
+            location.reload();
         } 
         }
        this.socket.onclose = function() {
