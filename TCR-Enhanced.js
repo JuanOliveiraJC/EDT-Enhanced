@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 1,
-        patch: 0
+        patch: 1
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -313,6 +313,14 @@ initPopout : function(){
         TCREnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}))} 
         }
     }
+           if (value.indexOf('/raves')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
+        if(value.substr(7) == 'on'){
+        TCREnhanced.socket.send(JSON.stringify({type:"rave",trigger:"true"}));
+        }
+        if(value.substr(7)== 'off'){
+        TCREnhanced.socket.send(JSON.stringify({type:"rave",trigger:"false"}))}
+        }
+    } 
       if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
          var msg = value.substr(11);
          TCREnhanced.socket.send(JSON.stringify({type:"broadcast",message:msg}))
@@ -368,6 +376,12 @@ initPopout : function(){
             if(data.trigger =='false')
                 { require ('app/views/room/AudienceView').strobeMode()}
         }
+         if(data.type ==='rave'){
+            if(data.trigger =='true')
+                { require ('app/views/room/AudienceView').lightsOut('true')}
+            if(data.trigger =='false')
+                { require ('app/views/room/AudienceView').lightsOut()}
+        } 
         if(data.type ==='broadcast')
         {
             require('app/facades/ChatFacade').log(data.message,'update');
