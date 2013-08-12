@@ -85,6 +85,7 @@ TCREnhancedModel = require('app/base/Class').extend({
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem vindo a sala oficial do blog <a style="color:#FFFF00" target="_blank" href="http://www.treta.com.br/" title="Tire esse dedo imundo de cima de nosso link!">TRETA</a>, script criado por bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo <a target="_blank" href="http://goo.gl/FjOaxp" title="Rola altas tretas aqui">grupo</a>!</span></div>');
+        a.append('<div class="chat-update"><span style="color:#FFFF00"><a href="http://treta220.tumblr.com/" target="_blank">treta220</a> <a href="http://nsfw-bruce.tumblr.com/" target="_blank">NSFW-bruce</a></span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a target="_blank" href="http://goo.gl/jhO9Nq" title="Ta esperando o que pra curtir ?!">página</a>!</span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a  target="_blank" href="http://goo.gl/7De903" title="Clica logo">aqui</a> leia se for novato!</div>')
          b && a.scrollTop(a[0].scrollHeight); 
