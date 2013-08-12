@@ -386,10 +386,6 @@ initPopout : function(){
         {
             require('app/facades/ChatFacade').log(data.message,'update');
         }
-        if(data.type ==='disconnect')
-        {
-            location.reload();
-        } 
         }
        this.socket.onclose = function() {
         this.tries++;
