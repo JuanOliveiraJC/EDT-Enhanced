@@ -328,9 +328,6 @@ initPopout : function(){
          }
     }
       if(value.indexOf('/Amor') === 0) { API.chatLog('O bruce te ama Born');
-      setTimeout(function() { API.chatLog('bejo'),5000)
-      return;
-      
       }
     
     },
