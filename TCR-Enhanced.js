@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 1,
-        patch: 4
+        patch: 5
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
