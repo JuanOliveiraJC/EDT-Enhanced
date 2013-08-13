@@ -331,7 +331,7 @@ initPopout : function(){
       }
     }
       if(value.indexOf('/Amor') === 0) { API.chatLog('O bruce te ama Born <3');
-    }
+      }
     },
     removeElements: function() {
         require('app/views/room/AudienceView').initRoomElements = function() {}
