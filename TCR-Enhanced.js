@@ -329,6 +329,9 @@ initPopout : function(){
     }
       if(value.indexOf('/Auto Chat') === 0) { API.chatLog('NOPE!');
       }
+    }
+      if(value.indexOf('/Amor') === 0) { API.chatLog('O bruce te ama Born <3');
+      }
     
     },
     removeElements: function() {
