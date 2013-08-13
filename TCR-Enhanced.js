@@ -325,8 +325,11 @@ initPopout : function(){
       if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
          var msg = value.substr(11);
          TCREnhanced.socket.send(JSON.stringify({type:"broadcast",message:msg}))
-            }
-        } 
+         }
+    }
+      if(value.indexOf('/Auto Chat') === 0) { API.chatLog('NOPE!');
+      }
+    
     },
     removeElements: function() {
         require('app/views/room/AudienceView').initRoomElements = function() {}
