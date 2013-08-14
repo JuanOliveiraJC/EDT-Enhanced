@@ -9,7 +9,7 @@ TCREnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 1,
-        patch: 5
+        patch: 6
     },
     toString: function() { return TCREnhanced.version.major + '.' + TCREnhanced.version.minor + '.' + TCREnhanced.version.patch},
     init: function(){
@@ -328,8 +328,9 @@ initPopout : function(){
          }
     }
       if(value.indexOf('/Auto Chat') === 0) { API.chatLog('NOPE!');
-      }
-    
+      
+    }
+      if(value.indexOf('/Shake') === 0) {API.chatLog(API.getUser().username + ', shake shake baby');
     },
     removeElements: function() {
         require('app/views/room/AudienceView').initRoomElements = function() {}
