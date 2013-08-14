@@ -330,9 +330,9 @@ initPopout : function(){
       if(value.indexOf('/Auto Chat') === 0) { API.chatLog('NOPE!');
       
     }
-      if(value.indexOf('/Shake') === 0) {API.chatLog(API.getUser().username + ', shake shake baby');
-      }
-      
+      if(value.indexOf('/Shake') === 0) {API.chatLog(API.getUser().username + ' shake shake baby');
+    }
+    
     },
     removeElements: function() {
         require('app/views/room/AudienceView').initRoomElements = function() {}
