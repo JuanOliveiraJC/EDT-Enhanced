@@ -71,7 +71,7 @@ var quizBotModel = require('app/base/Class').extend({
 	questionPicker: [],
 	songTimer: ['1','1'],
 	questions: [
-		"[Music] Artist who claims Monstercat's most viewed video on Youtube.",
+		"[Musica] Qual o artista mais com mais views no youtube ?",
 		"[Music] Name the artist with the first Drum and Bass song with the new Monstercat layout.",
 		"[Music] What does EDM stand for?",
 		"[Music] \"Ain't No Party Like A _____ _____\"",
