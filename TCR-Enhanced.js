@@ -155,11 +155,11 @@ TCREnhancedModel = require('app/base/Class').extend({
         $('#room-wheel').css('background-repeat','no-repeat');
         $('#room-wheel').css('background-position','500px 275px');
         $('#meta-frame .frame-background').hide('.frame-background');
-        $('#button-dj-waitlist-join').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
-        $('#button-dj-waitlist-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
+        $('#button-dj-waitlist-join').attr('style','background-image:url(https://www.dropbox.com/s/2r69k0r4mi0nslh/JoinBooth.png); display: block;');
+        $('#button-dj-waitlist-leave').attr('style','background-image:url(https://www.dropbox.com/s/ls7coic5q1pidj6/LeaveBooth.png); display: block;');
         $('#button-dj-play').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
         $('#button-dj-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
-        $('#dj-console').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/dj_console.png); display:block; position:absolute; top:15px; width:317px;');
+        $('#dj-console').attr('style','background-image:url(https://www.dropbox.com/s/uhow4yknplhtz6g/Booth.png); display:block; position:absolute; top:15px; width:317px;');
         $('#button-add-this').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/add_this.png);');
         $('#meta-frame').css('background-color','transparent');
         $('#playback .frame-background').hide('.frame-background');
@@ -167,7 +167,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="TCR-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/stay_dench.png") no-repeat scroll center top #050505;}'
+            + 'html{background: url("http://dedeep.com/wp-content/uploads/2013/03/weed-background.jpg") no-repeat scroll center top #050505;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
             + 'body {color:#EEEE00;}'
             + '#current-dj-value {color:#66FFFF;}'
