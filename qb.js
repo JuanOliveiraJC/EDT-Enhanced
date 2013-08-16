@@ -18,8 +18,8 @@ var quizBotModel = require('app/base/Class').extend({
 		API.on(API.USER_JOIN,			this.proxy.userJoin);
 		
 		//starup messages
-		API.sendChat('Quizbot ' + this.version + ' now running! The quiz will start at the next song. GL HF!')
-		console.log('Quizbot ' + this.version + ' now running!')
+		API.sendChat('Quizbot versão ' + this.version + ' ligado, primeira pergunta na proxima música!')
+		console.log('Quizbot ' + this.version + ' esta rodando cara cuidado XP')
 		
 		//load player stats
 		if (JSON.parse(localStorage.getItem('playerNames')) !== null) {
@@ -52,7 +52,7 @@ var quizBotModel = require('app/base/Class').extend({
 		API.off(API.USER_JOIN,			this.proxy.userJoin);
 		
 		//shutdown message
-		console.log('Quizbot ' + this.version + ' shut down.')
+		console.log('Quizbot versão ' + this.version + ' desligado')
 		
 		//save player stats
 		localStorage.setItem('playerNames', JSON.stringify(this.playerNames))
@@ -173,8 +173,8 @@ var quizBotModel = require('app/base/Class').extend({
 		["200", "200 songs"],
 	],
 	themes: [
-		" answered correctly! Gained 5 QuizCoins and points, for a total of: ",
-		["test answer correct", " is crashing this concert! Welcome back!", "test leave"]
+		" RESPOSTA CORRETA XD, Você ganhou 5 QuizCoins e pontos, total de: ",
+		["resposta de teste correta", " esta quebrando o concerto! Bem-vindo novamente!", "teste acabou"]
 	],
 	
 	//get user object function
@@ -195,15 +195,15 @@ var quizBotModel = require('app/base/Class').extend({
 		if (message.indexOf('~') === 0 && API.hasPermission(data.fromID, API.ROLE.BOUNCER)) {
 			switch (message) {
 			case '~quizhelp':
-				API.sendChat('Quizbot is a bot that runs a quiz system! The bot asks a question every now and then, so be prepared to answer. The first person to answer correctly gets points and QuizCoins.')
+				API.sendChat('Quizbot é um bot que tem um sistema de perguntas, a cada pergunta a primeira pessoa que responder corretamente a pergunta ganha 5 pontos e 5 Quizcoins!')
 				break;
 			case '~leaderboard':
 				var link = ''
-				API.sendChat('Coming soon: Leaderboard: ' + link)
+				API.sendChat('Coming soon: Leaderboard: ')
 				break;
 			case '~shop':
 				var link = ''
-				API.sendChat('Coming soon: Themes to buy with QuizCoins! ' + link)
+				API.sendChat('Coming soon: Themes to buy with QuizCoins! ')
 				break;
 			case '@save':
 				localStorage.setItem('playerNames', JSON.stringify(this.playerNames))
@@ -213,34 +213,34 @@ var quizBotModel = require('app/base/Class').extend({
 				API.sendChat('Stats saved.')
 				break;
 			case '~quizkill':
-				if (API.hasPermission(data.fromID,API.ROLE.AMBASSADOR) === true || data.fromID === '50aeb11a96fba52c3ca0699e' || data.fromID === API.getUser().id) {
-					API.sendChat('Quizbot has to leave for now. I\'ll be back soon!')
+				if (API.hasPermission(data.fromID,API.ROLE.AMBASSADOR) === true || data.fromID === '5105e7a23e083e5100cc1d96' || data.fromID === API.getUser().id) {
+					API.sendChat('Quizbot tem que sair, eu voltarei em breve ;)')
 					this.close()
 				}
 				break;
 			case '!quizreload':
-				if (API.hasPermission(data.fromID,API.ROLE.MANAGER) === true || data.fromID === '50aeb583c3b97a2cb4c34b2b' || data.fromID === API.getUser().id) {
-					API.sendChat('Reloading...')
-					setTimeout(function(){$.getScript('https://dl.dropboxusercontent.com/s/x0fs43vhhyd86gm/quizbot.js')},2000)
+				if (API.hasPermission(data.fromID,API.ROLE.MANAGER) === true || data.fromID === '5105e7a23e083e5100cc1d96' || data.fromID === API.getUser().id) {
+					API.sendChat('Recarregando...')
+					setTimeout(function(){$.getScript('https://raw.github.com/madzomboy/TRETA-Enhanced/master/qb.js')},2000)
 				}
 				break;
 			}
 			if (message.indexOf('!points @') === 0) {
 				var user = this.getUserID(data.message.substr(8))
-				if (user === null) { API.sendChat('User not found.') }
+				if (user === null) { API.sendChat('Usuario não encontrado!') }
 				else {
-					if (this.playerNames.indexOf(user.id) === -1) { API.sendChat('This user hasn\'t answered a question yet.') }
+					if (this.playerNames.indexOf(user.id) === -1) { API.sendChat('Esse usuario não respondeu nenhuma pergunta, ainda.') }
 					else {
 						var nameIndex = this.playerNames.indexOf(user.id)
-						API.sendChat(user.username + ' has ' + this.playerPoints[nameIndex] + ' points.')
+						API.sendChat(user.username + ' tem ' + this.playerPoints[nameIndex] + ' pontos')
 					}
 				}
 			}
 			if (message.indexOf('~coins @') === 0) {
 				var user = this.getUserID(data.message.substr(7))
-				if (user === null) { API.sendChat('User not found.') }
+				if (user === null) { API.sendChat('Usuario não encontrado!') }
 				else {
-					if (this.playerNames.indexOf(user.id) === -1) { API.sendChat('This user hasn\'t answered a question yet.') }
+					if (this.playerNames.indexOf(user.id) === -1) { API.sendChat('Este usuário não respondeu nenhuma questão.') }
 					else {
 						var nameIndex = this.playerNames.indexOf(user.id)
 						API.sendChat(user.username + ' has ' + this.playerCoins[nameIndex] + ' coins.')
@@ -274,7 +274,7 @@ var quizBotModel = require('app/base/Class').extend({
 					this.playerTheme.push('0')
 					this.playerPoints.push('5')
 					this.playerCoins.push('5')
-					API.sendChat('@' + data.from + ' answered correctly! Gained 5 QuizCoins and points, for a total of: 5 QC, 5 pts')
+					API.sendChat('@' + data.from + ' resposta correta! Ganhou 5 QuizCoins, um total de: 5 QC, 5 pts')
 				} else {
 					//existing user
 					var user = this.playerNames.indexOf(data.fromID)
@@ -298,7 +298,7 @@ var quizBotModel = require('app/base/Class').extend({
 		switch(timer) {
 		case 1:
 			if (this.answerMode.length === 0) { 
-				setTimeout(function(){API.sendChat('The next question is after this song.')},7000)
+				setTimeout(function(){API.sendChat('Proxima pergunta após essa música.')},7000)
 				this.songTimer.push('1')
 				localStorage.setItem('playerNames', JSON.stringify(this.playerNames))
 				localStorage.setItem('playerCoins', JSON.stringify(this.playerCoins))
@@ -312,7 +312,7 @@ var quizBotModel = require('app/base/Class').extend({
 				var a = this.answers
 				this.answerMode.length = 0
 				this.questionPicker.push('1')
-				if (typeof a[w] === 'string') { API.sendChat('Drat! Nobody guessed correctly. The answer was: ' + a[w] + '. The next question is after this song.') }
+				if (typeof a[w] === 'string') { API.sendChat('Drat! Ninguém acertou corretamente. A resposta era: ' + a[w] + '. A proxima pergunta será após essa música.') }
 				else { API.sendChat('Drat! Nobody guessed correctly. The answer was: ' + a[w][0] + '. The next question is after this song.') }
 			} else { setTimeout(function(){API.sendChat('The next question is after this song.')},7000) }
 			//save stuff
@@ -324,7 +324,7 @@ var quizBotModel = require('app/base/Class').extend({
 		case 3:
 			//check if there are questions left
 			if (w === this.questions.length) {
-				setTimeout(function(){API.sendChat('Whoops! Looks like I\'ve run out of questions.')},7000)
+				setTimeout(function(){API.sendChat('Whoops! parece que eu pulei uma pergunta :P')},7000)
 				this.close()
 			} else {
 				//send out a new question every 3rd song
