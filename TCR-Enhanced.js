@@ -84,7 +84,6 @@ TCREnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Por favor leia <a href="http://pastebin.com/snZGh1T9" target="_blank">este</a> texto e me ajude.</i></span></div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a  target="_blank" href="http://goo.gl/7De903" title="Clica logo">aqui</a> leia se for novato!</div>')
          b && a.scrollTop(a[0].scrollHeight); 
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.js")
@@ -163,7 +162,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="TCR-css">'
-            + 'html{background: url("http://i.imgur.com/A43Okjz.jpg") no-repeat scroll center top #050505;}'
+            + 'html{background: url("http://dl.dropboxusercontent.com/u/79625725/Luminant%20script/room_backround.jpg") no-repeat scroll center top #050505;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
             + 'body {color:#EEEE00;}'
             + '#current-dj-value {color:#66FFFF;}'
