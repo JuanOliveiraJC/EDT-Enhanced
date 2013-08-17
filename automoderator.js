@@ -3,7 +3,7 @@ if (autoModerator !== undefined)
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "1.1.1",
+  version: "1.1.2",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -28,7 +28,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 		API.on(API.CHAT,          this.proxy.chat);
 		API.on(API.CHAT_COMMAND,  this.proxy.chatCommand);
 		console.log('Anti Spam versão ' + this.version + ' ligado XD !')
-		API.sendChat('to much high')
+		API.sendChat('vamo shakear o ass galere')
 	},
 	close: function() {
 		API.off(API.CHAT,          this.proxy.onChat);
