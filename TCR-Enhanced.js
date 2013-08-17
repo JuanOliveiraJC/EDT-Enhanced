@@ -83,11 +83,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT,this.proxy.onChat)
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
-        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Por favor leia <a href="http://pastebin.com/snZGh1T9" target="_blank">este</a> texto e me ajude.</i></span></div>)
-        a.append('<div class="chat-update"><span style="color:#FF0000"><i>Bem vindo a sala oficial do blog <a style="color:#FFFF00" target="_blank" href="http://www.treta.com.br/" title="Tire esse dedo imundo de cima de nosso link!">TRETA</a>, script criado por bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">Entre para nosso grupo <a target="_blank" href="http://goo.gl/FjOaxp" title="Rola altas tretas aqui">grupo</a>!</span></div>');
-        a.append('<div class="chat-update"><i>Tumblr</i>: <a style="color:#FFFF00" href="http://treta220.tumblr.com/" target="_blank">TRETA220v</a></span></div>');
-        a.append('<div class="chat-update"><span style="color:#FFFF00">Curta nossa <a target="_blank" href="http://goo.gl/jhO9Nq" title="Ta esperando o que pra curtir ?!">página</a>!</span></div>');
+        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Por favor leia <a href="http://pastebin.com/snZGh1T9" target="_blank">este</a> texto e me ajude.</i></span></div>');
         a.append('<div class="chat-update"><span style="color:#FFFF00">Dicas e regras da sala <a  target="_blank" href="http://goo.gl/7De903" title="Clica logo">aqui</a> leia se for novato!</div>')
          b && a.scrollTop(a[0].scrollHeight); 
         this.removeElements();
@@ -167,7 +163,7 @@ TCREnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="TCR-css">'
-            + 'html{background: url("http://dedeep.com/wp-content/uploads/2013/03/weed-background.jpg") no-repeat scroll center top #050505;}'
+            + 'html{background: url("http://i.imgur.com/A43Okjz.jpg") no-repeat scroll center top #050505;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
             + 'body {color:#EEEE00;}'
             + '#current-dj-value {color:#66FFFF;}'
