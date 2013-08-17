@@ -15,6 +15,9 @@ var autoModeratorModel = require('app/base/Class').extend({
                 'adf.ly',
                 'adf.ly/',
                 'http://adf.ly',
+                'fuck ambassadors',
+                'fuck you ambassador',
+                'fuck you admin'
 	],
 	mutedUsers: [],
 	init: function() {
@@ -25,7 +28,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 		API.on(API.CHAT,          this.proxy.chat);
 		API.on(API.CHAT_COMMAND,  this.proxy.chatCommand);
 		console.log('Anti Spam versão ' + this.version + ' ligado XD !')
-		API.sendChat('pei pa')
+		API.sendChat('to much high')
 	},
 	close: function() {
 		API.off(API.CHAT,          this.proxy.onChat);
