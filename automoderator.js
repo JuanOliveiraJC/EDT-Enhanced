@@ -3,9 +3,11 @@ if (autoModerator !== undefined)
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "1.0.9",
+  version: "1.1.0",
 	bannedWords: [
 		'http://plug.dj',
+		'http://www.plug.dj',
+		'plug.dj/',
 		':shit:',
 		':poop:',
                 ':trollface:',
