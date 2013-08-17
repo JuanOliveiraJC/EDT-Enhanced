@@ -17,7 +17,11 @@ var autoModeratorModel = require('app/base/Class').extend({
                 'http://adf.ly',
                 'fuck ambassadors',
                 'fuck you ambassador',
-                'fuck you admin'
+                'fuck you admin',
+                'xvideos.com/',
+                'http://xvideos.com/',
+                'http://www.xvideos.com',
+                'http://www.xvideos.com/'
 	],
 	mutedUsers: [],
 	init: function() {
