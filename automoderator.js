@@ -25,7 +25,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 		API.on(API.CHAT,          this.proxy.chat);
 		API.on(API.CHAT_COMMAND,  this.proxy.chatCommand);
 		console.log('Anti Spam versão ' + this.version + ' ligado XD !')
-		API.sendChat('Anti Spam versão ' + this.version + ' ligado ! RUN BITCHES')
+		API.sendChat('pei pa')
 	},
 	close: function() {
 		API.off(API.CHAT,          this.proxy.onChat);
