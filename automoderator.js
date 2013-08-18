@@ -32,7 +32,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 	close: function() {
 		API.off(API.CHAT,          this.proxy.onChat);
 		API.off(API.CHAT_COMMAND,  this.proxy.onChatCommand);
-		API.chatLog('Anti Spam versão ' + this.version + ' agora parado!')
+		API.chatLog('')
 	},
 	onChat:function(data) {
 		for (var i in this.bannedWords) {
