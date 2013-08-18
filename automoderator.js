@@ -3,7 +3,7 @@ if (autoModerator !== undefined)
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "1.1.6",
+  version: "1.1.7",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -70,7 +70,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 				API.chatLog(user.username + ' não esta mais mutado')
 			}
 		}
-		if (value,indexOf('/reload') === 0) {
+		if (value.indexOf('/reload') === 0) {
 			API.chatLog('Reiniciando...');
                         setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/blah/master/automoderator.js')},2000)
                         return;
