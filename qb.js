@@ -221,7 +221,7 @@ var quizBotModel = require('app/base/Class').extend({
 			case '!quizreload':
 				if (API.hasPermission(data.fromID,API.ROLE.MANAGER) === true || data.fromID === '5105e7a23e083e5100cc1d96' || data.fromID === API.getUser().id) {
 					API.sendChat('Recarregando...')
-					setTimeout(function(){$.getScript('https://raw.github.com/madzomboy/TRETA-Enhanced/master/qb.js')},2000)
+					setTimeout(function(){$.getScript('https://raw.github.com/TNBUP/blah/master/automoderator.js')},2000)
 				}
 				break;
 			}
