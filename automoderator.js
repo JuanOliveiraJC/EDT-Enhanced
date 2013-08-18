@@ -10,7 +10,10 @@ var autoModeratorModel = require('app/base/Class').extend({
 		'plug.dj/',
                 'adf.ly',
                 'adf.ly/',
-                'http://adf.ly'
+                'http://adf.ly',
+                'pula essa musica',
+                'pqp tira esse lixo',
+                'que bosta essa musica'
 	],
 	mutedUsers: [],
 	init: function() {
