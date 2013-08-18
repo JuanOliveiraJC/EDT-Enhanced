@@ -3,7 +3,7 @@ if (autoModerator !== undefined)
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "1.1.5",
+  version: "1.1.6",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -18,11 +18,6 @@ var autoModeratorModel = require('app/base/Class').extend({
                 'fuck ambassadors',
                 'fuck you ambassador',
                 'fuck you admin',
-                'xvideos.com/',
-                'http://xvideos.com/',
-                'http://www.xvideos.com',
-                'http://www.xvideos.com/',
-                'xvideos.com'
 	],
 	mutedUsers: [],
 	init: function() {
