@@ -19,7 +19,7 @@ var quizBotModel = require('app/base/Class').extend({
 		
 		//starup messages
 		API.sendChat('Quizbot versão ' + this.version + ' ligado, primeira pergunta na proxima música!')
-		console.log('Quizbot versão' + this.version + ' está rodando. Cara, cuidado XP')
+		API.chatLog('Quizbot ligado com sucesso')
 		
 		//load player stats
 		if (JSON.parse(localStorage.getItem('playerNames')) !== null) {
@@ -52,7 +52,7 @@ var quizBotModel = require('app/base/Class').extend({
 		API.off(API.USER_JOIN,			this.proxy.userJoin);
 		
 		//shutdown message
-		console.log('Quizbot versão ' + this.version + ' desligado')
+		API.sendChat('Quizbot versão ' + this.version + ' desligado')
 		
 		//save player stats
 		localStorage.setItem('playerNames', JSON.stringify(this.playerNames))
@@ -62,7 +62,7 @@ var quizBotModel = require('app/base/Class').extend({
 	},
 	
 	//variables & arrays
-	version: '0.1.6',
+	version: '1.0.0',
 	playerNames: [],
 	playerCoins: [],
 	playerTheme: [],
