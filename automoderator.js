@@ -70,6 +70,11 @@ var autoModeratorModel = require('app/base/Class').extend({
 				API.chatLog(user.username + ' não esta mais mutado')
 			}
 		}
+		if (value,indexOf('/reload') === 0) {
+			API.chatLog('Reiniciando...');
+                        setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/blah/master/automoderator.js')},2000)
+                        return;
+		}
 	},
 	getUserID: function(data) {
     	data = data.trim();
