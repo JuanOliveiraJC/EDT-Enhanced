@@ -3,7 +3,7 @@ if (autoModerator !== undefined)
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "1.1.4",
+  version: "1.1.5",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -53,10 +53,10 @@ var autoModeratorModel = require('app/base/Class').extend({
 			var a = value.substr(8)
 			if (this.bannedWords.indexOf(a) < 0) {
 				this.bannedWords.push(a)
-				API.sendChat(a + ' adicionada as palavras banidas')
+				API.chatLog(a + ' adicionada as palavras banidas')
 			} else {
 				this.bannedWords.splice(this.bannedWords.indexOf(a),1)
-				API.sendChat(a + ' removida das palavras banidas')
+				API.chatLog(a + ' removida das palavras banidas')
 			}
 		}
 		if (value.indexOf('/mute') === 0) {
@@ -64,7 +64,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 			if (user === null) API.chatLog('usuario não encontrado!')
 			else {
 				this.mutedUsers.push(user.id)
-				API.sendChat(user.username + ' agora esta mutado')
+				API.chatLog(user.username + ' agora esta mutado')
 			}
 		}
 		if (value.indexOf('/unmute') === 0) {
@@ -72,7 +72,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 			if (user === null) API.chatLog('usuario não encontrado!')
 			else if (this.mutedUsers.indexOf(user.id) > -1) {
 				this.mutedUsers.splice(this.mutedUsers.indexOf(user.id), 1);
-				API.sendChat(user.username + ' não esta mais mutado')
+				API.chatLog(user.username + ' não esta mais mutado')
 			}
 		}
 	},
