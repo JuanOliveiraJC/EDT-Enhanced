@@ -199,11 +199,11 @@ var quizBotModel = require('app/base/Class').extend({
 				break;
 			case '~leaderboard':
 				var link = ''
-				API.sendChat('Coming soon: Leaderboard: ')
+				API.sendChat('Breve...')
 				break;
 			case '~shop':
 				var link = ''
-				API.sendChat('Coming soon: Themes to buy with QuizCoins! ')
+				API.sendChat('Breve...')
 				break;
 			case '@save':
 				localStorage.setItem('playerNames', JSON.stringify(this.playerNames))
@@ -213,7 +213,7 @@ var quizBotModel = require('app/base/Class').extend({
 				API.sendChat('Stats saved.')
 				break;
 			case '~quizkill':
-				if (API.hasPermission(data.fromID,API.ROLE.AMBASSADOR) === true || data.fromID === '5105e7a23e083e5100cc1d96' || data.fromID === API.getUser().id) {
+				if (API.hasPermission(data.fromID,API.ROLE.MANAGER) === true || data.fromID === '5105e7a23e083e5100cc1d96' || data.fromID === API.getUser().id) {
 					API.sendChat('Quizbot tem que sair, eu voltarei em breve ;)')
 					this.close()
 				}
