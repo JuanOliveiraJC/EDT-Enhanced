@@ -1,4 +1,4 @@
-if (quizBot !== undefined) quizBot.close()
+﻿if (quizBot !== undefined) quizBot.close()
 
 String.prototype.equalsIgnoreCase = function(other) { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var quizBotModel = require('app/base/Class').extend({
@@ -52,7 +52,7 @@ var quizBotModel = require('app/base/Class').extend({
 		API.off(API.USER_JOIN,			this.proxy.userJoin);
 		
 		//shutdown message
-		API.sendChat('Quizbot versão ' + this.version + ' desligado')
+		API.chatLog('Quizbot versão ' + this.version + ' desligado')
 		
 		//save player stats
 		localStorage.setItem('playerNames', JSON.stringify(this.playerNames))
