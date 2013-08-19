@@ -62,7 +62,7 @@ var quizBotModel = require('app/base/Class').extend({
 	},
 	
 	//variables & arrays
-	version: '1.0.0',
+	version: '2.0.0',
 	playerNames: [],
 	playerCoins: [],
 	playerTheme: [],
@@ -99,8 +99,8 @@ var quizBotModel = require('app/base/Class').extend({
 		"[Gaming] [Skyrim] The name of the housecarl appointed to you in Whiterun.",
 		"[Gaming] [Skyrim] \"Aww, let me guess: someone stole your _______ ?\"",
 		"[Gaming] [Skyrim] Quantas skills estão presente no Skyrim ?",
-		"[Gaming] [Skyrim] How many houses can you buy in total (excluding DLC)?",
-		"[Gaming] [Skyrim] What material is the strongest for Heavy Armor?",
+		"[Gaming] [Skyrim] Qual o total de casas que você pode construir (excluindo DLC)?",
+		"[Gaming] [Skyrim] Qual o material usado para uma forte armadura ?",
 		"[Gaming] [PokÃ©mon] Name of the PokÃ©mon Professor in Ruby/Sapphire/Emerald.",
 		"[Gaming] [PokÃ©mon] Quem é o inimo mortal de Seviper ?",
 		"[Gaming] [PokÃ©mon] Qual o pokemon de numero 150 na pokedex ?.",
