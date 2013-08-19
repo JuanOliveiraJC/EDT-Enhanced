@@ -3,7 +3,7 @@
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "master",
+  version: "3.0.0",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
