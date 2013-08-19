@@ -68,7 +68,7 @@ var autoModeratorModel = require('app/base/Class').extend({
                         setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/blah/master/extras/automoderator.js')},1000)
                         return;
 		}
-		if (value == '/close'){autoModerator.close(),!0}
+		if (value.indexOf('/die') === 0) {return autoModerator.close()}
 	},
 	getUserID: function(data) {
     	data = data.trim();
