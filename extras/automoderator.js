@@ -1,4 +1,4 @@
-if (autoModerator !== undefined)
+﻿if (autoModerator !== undefined)
   autoModerator.close()
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
@@ -65,7 +65,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 		}
 		if (value.indexOf('/reload') === 0) {
 			API.chatLog('Reiniciando...');
-                        setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/blah/master/automoderator.js')},2000)
+                        setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/blah/master/automoderator.js')},1000)
                         return;
 		}
 	},
