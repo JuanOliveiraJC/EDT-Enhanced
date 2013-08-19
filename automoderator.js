@@ -14,6 +14,11 @@ var autoModeratorModel = require('app/base/Class').extend({
                 'pula essa musica',
                 'pqp tira esse lixo',
                 'que bosta essa musica'
+                'fuck ambassadors',
+                'fuck admin',
+                'admins here sucks',
+                'fuck you ambassadors',
+                'hu3 hu3 hu3'
 	],
 	mutedUsers: [],
 	init: function() {
