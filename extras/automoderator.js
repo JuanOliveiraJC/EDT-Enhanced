@@ -3,14 +3,14 @@
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "master",
+  version: "3.0.0",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
 		'plug.dj/',
                 'adf.ly',
                 'adf.ly/',
-                'http://adf.ly',
+                'http://adf.ly'
 	],
 	mutedUsers: [],
 	init: function() {
@@ -68,6 +68,7 @@ var autoModeratorModel = require('app/base/Class').extend({
                         setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/blah/master/extras/automoderator.js')},1000)
                         return;
 		}
+		if (value.indexOf('/die') === 0) {return autoModerator.close()}
 	},
 	getUserID: function(data) {
     	data = data.trim();
