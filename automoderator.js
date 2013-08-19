@@ -11,14 +11,6 @@ var autoModeratorModel = require('app/base/Class').extend({
                 'adf.ly',
                 'adf.ly/',
                 'http://adf.ly',
-                'pula essa musica',
-                'pqp tira esse lixo',
-                'que bosta essa musica'
-                'fuck ambassadors',
-                'fuck admin',
-                'admins here sucks',
-                'fuck you ambassadors',
-                'hu3 hu3 hu3'
 	],
 	mutedUsers: [],
 	init: function() {
@@ -33,7 +25,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 	close: function() {
 		API.off(API.CHAT,          this.proxy.onChat);
 		API.off(API.CHAT_COMMAND,  this.proxy.onChatCommand);
-		API.chatLog('')
+		API.chatLog('Anti Spam desligado')
 	},
 	onChat:function(data) {
 		for (var i in this.bannedWords) {
