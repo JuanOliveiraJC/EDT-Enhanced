@@ -3,7 +3,7 @@
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "3.0.1",
+  version: "3.1.3",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -24,7 +24,9 @@ var autoModeratorModel = require('app/base/Class').extend({
                 '/me is now your fa',
                 '/em is now your fã!',
                 '/me is now your fa!',
-                'agora e seu fa'
+                'agora e seu fa',
+                '/me agora e seu fa',
+                '/em agora e seu fa'
 	],
 	mutedUsers: [],
 	init: function() {
