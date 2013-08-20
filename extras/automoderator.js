@@ -10,7 +10,20 @@ var autoModeratorModel = require('app/base/Class').extend({
 		'plug.dj/',
                 'adf.ly',
                 'adf.ly/',
-                'http://adf.ly'
+                'http://adf.ly',
+                'is now your fan!',
+                'is now your fan',
+                'is now your fa',
+                'is now your fã',
+                '/me is now your fan!',
+                '/em is now your fan!',
+                '/me is now your fã',
+                '/em is now your fã',
+                'is now your fã!',
+                'is now your fa!',
+                '/me is now your fa',
+                '/em is now your fã!',
+                '/me is now your fa!'
 	],
 	mutedUsers: [],
 	init: function() {
