@@ -62,7 +62,7 @@ var quizBotModel = require('app/base/Class').extend({
 	},
 	
 	//variables & arrays
-	version: '2.0.0',
+	version: '2.0.1',
 	playerNames: [],
 	playerCoins: [],
 	playerTheme: [],
@@ -108,7 +108,7 @@ var quizBotModel = require('app/base/Class').extend({
 		"[Jogos] [Pokemon] Trocar um Spearow por este Pokémon na cidade de Vermillion.",
 		"[Jogos] [Pokemon] Mapa de Unova é baseado em qual cidade da vida real ?",
 		"[Jogos] [Pokemon] O que você dá para os guardas do portão que bloqueiam o caminho para a cidade de açafrão? (gen 3)",
-		"[plug.dj] Qual é o gênero preferido do Super?",
+		"[plug.dj] Qual é a atriz porno preferida pelo The Notorious Bruce ?",
 		"[plug.dj] Qual o nome do dono e criador do plug.dj.",
 		"[plug.dj] Quem me criou ?",
 		"[plug.dj] Quem é a cabeça do programa dos embaixadores ?",
@@ -214,7 +214,7 @@ var quizBotModel = require('app/base/Class').extend({
 				break;
 			case '~quizkill':
 				if (API.hasPermission(data.fromID,API.ROLE.MANAGER) === true || data.fromID === '5105e7a23e083e5100cc1d96' || data.fromID === API.getUser().id) {
-					API.sendChat('Quizbot tem que sair, mas voltará em breve ;)')
+					API.sendChat('Quizbot se auto destruindo em 3...2...')
 					this.close()
 				}
 				break;
@@ -313,7 +313,7 @@ var quizBotModel = require('app/base/Class').extend({
 				this.answerMode.length = 0
 				this.questionPicker.push('1')
 				if (typeof a[w] === 'string') { API.sendChat('Drat! Ninguém acertou corretamente. A resposta era: ' + a[w] + '. A próxima pergunta será depois desta música.') }
-				else { API.sendChat('Drat! Ninguém acertou corretamente. A resposta era: ' + a[w][0] + '. A próxima pergunta será depois desta música.') }
+				else { API.sendChat('Hmmptf! Ninguém acertou corretamente. A resposta era: ' + a[w][0] + '. A próxima pergunta será depois desta música.') }
 			} else { setTimeout(function(){API.sendChat('A próxima música será depois desta música.')},7000) }
 			//save stuff
 			localStorage.setItem('playerNames', JSON.stringify(this.playerNames))
