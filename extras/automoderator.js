@@ -26,7 +26,17 @@ var autoModeratorModel = require('app/base/Class').extend({
                 '/me is now your fa!',
                 'agora e seu fa',
                 '/me agora e seu fa',
-                '/em agora e seu fa'
+                '/em agora e seu fa',
+                'agora e seu fa!',
+                'agora e seu fã',
+                'agora e seu fã!',
+                '/em agora e seu fa!',
+                '/em agora e seu fã!',
+                '/em agora e seu fã',
+                '/me agora e seu fa!',
+                '/me agora e seu fa!',
+                '/me agora e seu fã!',
+                '/me agora e seu fã'
 	],
 	mutedUsers: [],
 	init: function() {
