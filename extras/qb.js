@@ -162,7 +162,7 @@ var quizBotModel = require('app/base/Class').extend({
 		["Nova York", "Cidade de Nova York"],
 		["chá", "chá quente"],
 		//[plug.dj]
-		"glitchhop",
+		"Sasha Grey",
 		"steven",
 		"fungus e super",
 		["sachi", "Sachi", "Sachi Subterranean"],
@@ -221,7 +221,7 @@ var quizBotModel = require('app/base/Class').extend({
 			case '!quizreload':
 				if (API.hasPermission(data.fromID,API.ROLE.MANAGER) === true || data.fromID === '5105e7a23e083e5100cc1d96' || data.fromID === API.getUser().id) {
 					API.sendChat('Recarregando...')
-					setTimeout(function(){$.getScript('https://raw.github.com/TNBUP/blah/master/qb.js')},2000)
+					setTimeout(function(){$.getScript('https://raw.github.com/TNBUP/blah/master/extras/qb.js')},2000)
 				}
 				break;
 			}
