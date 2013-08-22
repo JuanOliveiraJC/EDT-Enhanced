@@ -3,7 +3,7 @@
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "3.1.5",
+  version: "3.1.7",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -67,7 +67,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 			API.moderateDeleteChat(data.chatID);
 	},
 	onChatCommand: function(value) {
-		if (value.indexOf('!banword') === 0) {
+		if (value.indexOf('/banword') === 0) {
 			var a = value.substr(8)
 			if (this.bannedWords.indexOf(a) < 0) {
 				this.bannedWords.push(a)
@@ -77,7 +77,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 				API.chatLog(a + ' removida das palavras banidas')
 			}
 		}
-		if (value.indexOf('!mute') === 0) {
+		if (value.indexOf('/mute') === 0) {
 			var user = this.getUserID(value.substr(5))
 			if (user === null) API.chatLog('usuario não encontrado!')
 			else {
@@ -85,7 +85,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 				API.chatLog(user.username + ' agora esta mutado')
 			}
 		}
-		if (value.indexOf('!unmute') === 0) {
+		if (value.indexOf('/unmute') === 0) {
 			var user = this.getUserID(value.substr(7))
 			if (user === null) API.chatLog('usuario não encontrado!')
 			else if (this.mutedUsers.indexOf(user.id) > -1) {
@@ -93,12 +93,12 @@ var autoModeratorModel = require('app/base/Class').extend({
 				API.chatLog(user.username + ' não esta mais mutado')
 			}
 		}
-		if (value.indexOf('!reload') === 0) {
+		if (value.indexOf('/reload') === 0) {
 			API.chatLog('Reiniciando...');
                         setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/blah/master/extras/automoderator.js')},1000)
                         return;
 		}
-		if (value.indexOf('!die') === 0) {return autoModerator.close()}
+		if (value.indexOf('/die') === 0) {return autoModerator.close()}
 	},
 	getUserID: function(data) {
     	data = data.trim();
