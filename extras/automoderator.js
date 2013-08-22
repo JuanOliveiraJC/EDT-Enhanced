@@ -3,7 +3,7 @@
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "3.1.7",
+  version: "3.1.8",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -50,12 +50,12 @@ var autoModeratorModel = require('app/base/Class').extend({
 		}
 		API.on(API.CHAT,          this.proxy.chat);
 		API.on(API.CHAT_COMMAND,  this.proxy.chatCommand);
-		API.chatLog('Anti Spam versão ' + this.version + ' ligado !')
+		API.chatLog('Anti-Spam versão ' + this.version + ' ligado !')
 	},
 	close: function() {
 		API.off(API.CHAT,          this.proxy.onChat);
 		API.off(API.CHAT_COMMAND,  this.proxy.onChatCommand);
-		API.chatLog('Anti Spam desligado')
+		API.chatLog('Anti-Spam versão ' + this.version + ' desligado')
 	},
 	onChat:function(data) {
 		for (var i in this.bannedWords) {
@@ -71,10 +71,10 @@ var autoModeratorModel = require('app/base/Class').extend({
 			var a = value.substr(8)
 			if (this.bannedWords.indexOf(a) < 0) {
 				this.bannedWords.push(a)
-				API.chatLog(a + ' adicionada as palavras banidas')
+				API.chatLog(a + ' é uma palavra banida')
 			} else {
 				this.bannedWords.splice(this.bannedWords.indexOf(a),1)
-				API.chatLog(a + ' removida das palavras banidas')
+				API.chatLog(a + ' não é mais uma palavra banida')
 			}
 		}
 		if (value.indexOf('/mute') === 0) {
