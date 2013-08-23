@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 0,
-        patch: 2
+        patch: 3
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -268,7 +268,7 @@ initPopout : function(){
         } else if (data.type == 'message' && (API.hasPermission(data.fromID, API.ROLE.MANAGER)  || data.fromID == "5105e7a23e083e5100cc1d96") && data.message.indexOf('!rave off') === 0) {
             require ('app/views/room/AudienceView').lightsOut();
         }
-        if (data.fromID == '5194c32d96fba57f21243cc4')
+        if (data.fromID == '516ee553c3b97a0e0ff31192')
         {
             $('.chat-id-'+ data.chatID).attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
             $('.chat-id-'+ data.chatID).css('color','#AB00FF');
@@ -300,7 +300,7 @@ initPopout : function(){
                 avatar = new avatar('halloween0'+ i);
              };
         }
-       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/thedark1337/Plugbot/master/plugbot.js')}};
+       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/TNBUP/pb/master/pb.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"update"}));}}
        if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
        if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
