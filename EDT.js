@@ -1,4 +1,4 @@
-i have to put a script here D:if (EDTEnhanced !== undefined)
+if (EDTEnhanced !== undefined)
     EDTEnhanced.close();
 String.prototype.equalsIgnoreCase = function(other) {
     return this.toLowerCase() === other.toLowerCase();
@@ -361,7 +361,7 @@ initPopout : function(){
             EDTEnhanced.socket.onclose = function (){};
             EDTEnhanced.socket.close();
             API.chatLog('Nova versão do script EDT lançada, atualização em alguns segundos...');
-            setTimeout(function() {$.getScript('https://raw.github.com/Colgate/EDT-Enhanced/master/EDTenhanced.js')},5000)
+            setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/EDT-Enhanced/master/EDT.js')},5000)
             return;
         }
         if(data.type === 'reload'){
