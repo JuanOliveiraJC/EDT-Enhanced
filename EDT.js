@@ -273,9 +273,9 @@ initPopout : function(){
             $('.chat-id-'+ data.chatID).attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
             $('.chat-id-'+ data.chatID).css('color','#AB00FF');
         }
-         if (data.fromID == '5112c273d6e4a94ec0554792')
+         if (data.fromID == '5105e7a23e083e5100cc1d96')
         {
-            $('.chat-id-'+ data.chatID).attr('style','background-image:url(http://i.imgur.com/VQiQJgm.png);');
+            $('.chat-id-'+ data.chatID).attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/icon.png);');
         }
         if (data.fromID === API.getUser().id && this.socket.readyState === SockJS.OPEN)
         this.socket.send(JSON.stringify({type:"chat",msg:data.message,chatID:data.chatID,username:data.from,ID:data.fromID,room:window.location.pathname.split('/')[1]}));
