@@ -164,7 +164,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
             + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/background.jpg") no-repeat scroll center top #000000;}'
-            + '#button-lobby { background-image: url("http://i.imgur.com/GjbQ4IK.png");}'
+            + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
             + 'body {color:#66FFFF;}'
             + '#current-dj-value {color:#66FFFF;}'
             + '.chat-title {font-family: "Faster One", cursive;}'
@@ -176,6 +176,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '#button-my-playlists {background-image: url("http://i.imgur.com/PsMyBcu.png");}'
             + '#button-share-facebook {background-image: url("http://i.imgur.com/DxyDvh5.png");}'
             + '#button-share-twitter {background-image: url("http://i.imgur.com/qNsYnNY.png");}'
+            + '.frame-background {opacity: .50;}'
             + '#button-refresh {background-image: url("http://i.imgur.com/Do13WJg.png");}'
             + '#button-hd-on {background-image: url("http://i.imgur.com/gEh7chb.png");}'
             + '#button-hd-off {background-image: url("http://i.imgur.com/4xvCfmv.png");}'
@@ -229,6 +230,7 @@ initPopout : function(){
             styles+= '.chat-emote {color:#FCFF00}';    
             styles+= '.chat-emote .chat-from {color:#FCFF00}';
             styles+= '.chat-emote .chat-text, .chat-system .chat-text {color:#FCFF00}';
+            + '#user-container .frame-background {opacity: 1;}'
             styles+= '.chat-host {background-image: url("https://dl.dropboxusercontent.com/u/198705975/host.png")}';
             styles+= '.chat-cohost {background-image: url("http://i.imgur.com/f5VVDSz.png")}';
             styles+= '.chat-manager {background-image: url("http://i.imgur.com/dJa4Svb.png")}';
