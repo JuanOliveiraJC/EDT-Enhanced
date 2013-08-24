@@ -3,7 +3,7 @@
 
 String.prototype.equalsIgnoreCase     = function(other)    { return typeof other !== 'string' ? false : this.toLowerCase() === other.toLowerCase(); };
 var autoModeratorModel = require('app/base/Class').extend({
-  version: "3.1.9",
+  version: "3.1.8",
 	bannedWords: [
 		'http://plug.dj',
 		'http://www.plug.dj',
@@ -61,8 +61,7 @@ var autoModeratorModel = require('app/base/Class').extend({
 		for (var i in this.bannedWords) {
 			var message = data.message.toLowerCase();
 			if (message.indexOf(this.bannedWords[i].toLowerCase()) > -1)
-				API.moderateDeleteChat(data.chatID);
-                                API.sendChat('Sem spam!')
+				API.moderateDeleteChat(data.chatID)
 		};
 		if (this.mutedUsers.indexOf(data.fromID) > -1)
 			API.moderateDeleteChat(data.chatID);
