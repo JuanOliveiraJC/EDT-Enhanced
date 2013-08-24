@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 0,
-        patch: 4
+        patch: 5
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -150,7 +150,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     initCSS: function() {
         $('#room-wheel').css('background','url("")');
         $('#room-wheel').css('background-repeat','no-repeat');
-        $('#room-wheel').css('background-position','500px 275px');
+        $('#room-wheel').css('background-position','500px 235px');
         $('#meta-frame .frame-background').hide('.frame-background');
         $('#button-dj-waitlist-join').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
         $('#button-dj-waitlist-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
@@ -165,6 +165,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
             + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/background.jpg") no-repeat scroll center top #000000;}'
+            + '#room-wheel {position:absolute;top:50px;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
             + 'body {color:#66FFFF;}'
             + '#current-dj-value {color:#66FFFF;}'
