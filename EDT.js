@@ -8,8 +8,8 @@ plugBot,
 EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
-        minor: 0,
-        patch: 8
+        minor: 1,
+        patch: 0
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -84,8 +84,8 @@ EDTEnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem-vindo a sala Electro, Dubstep & Techno, script criado por The Notorious Bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
-        a.append('<div class="chat-update"><span style="color:#0000FF">Entre para o nosso</span> <a style="color:#0000FF" href="http://j.mp/14THjE0" target="_blank">grupo</a></div>');
-        a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa</span> <a style="color:#0000FF" href="http://j.mp/13KWqPd" target="_blank">página</a></div>');
+        a.append('<div class="chat-update"><span style="color:#0000FF">Entre para o nosso grupo clicando</span> <a style="color:#0000FF" href="http://j.mp/14THjE0" target="_blank">aqui</a></div>');
+        a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa página clicando</span> <a style="color:#0000FF" href="http://j.mp/13KWqPd" target="_blank">aqui</a></div>');
          b && a.scrollTop(a[0].scrollHeight);
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.js")
