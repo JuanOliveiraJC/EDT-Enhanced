@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 1,
-        patch: 2
+        patch: 3
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -177,7 +177,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '#button-dj-waitlist-view {background-image: url("http://i.imgur.com/Ppaf1EX.png");}'
             + '#button-my-playlists {background-image: url("http://i.imgur.com/PsMyBcu.png");}'
             + '#button-share-facebook {background-image: url("http://i.imgur.com/DxyDvh5.png");}'
-            + '#button-share-twitter {background-image: url("http://i.imgur.com/qNsYnNY.png");}'
+            + '#button-share-twitter {background-image: url("https://dl.dropboxusercontent.com/u/198705975/tt.png");}'
             + '.frame-background {opacity: .50;}'
             + '#button-refresh {background-image: url("http://i.imgur.com/Do13WJg.png");}'
             + '#button-hd-on {background-image: url("https://dl.dropboxusercontent.com/u/198705975/1376579709_hd_ready.png");}'
