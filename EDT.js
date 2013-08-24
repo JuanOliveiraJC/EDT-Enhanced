@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 1,
-        patch: 6
+        patch: 7
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -35,7 +35,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonVotePositiveDisabled = "http://plug.dj/_/static/images/en/ButtonVotePositiveDisabled.ce7c40b3.png";
         Lang.ui.buttonAddThis = "https://dl.dropboxusercontent.com/u/198705975/add_this.png";
         Lang.ui.buttonAddThisDisabled = "https://dl.dropboxusercontent.com/u/198705975/add_this.png";   
-        Lang.ui.buttonSkipThis  = "http://i.imgur.com/kL3MvJm.png";
+        Lang.ui.buttonSkipThis  = "https://dl.dropboxusercontent.com/u/198705975/skip_this.png";
         Lang.rollover.fans = "Minions"
         Lang.messages.fanEnter = "Seu minion %NAME% acaba de entrar na sala"
         Lang.messages.fanOf = "Você agora é minion de %NAME%."
@@ -275,7 +275,6 @@ initPopout : function(){
         if (data.fromID == '516ee553c3b97a0e0ff31192')
         {
             $('.chat-id-'+ data.chatID).attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
-            $('.chat-id-'+ data.chatID).css('color','#AB00FF');
         }
          if (data.fromID == '5105e7a23e083e5100cc1d96')
         {
