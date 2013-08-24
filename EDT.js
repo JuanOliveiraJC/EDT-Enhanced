@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 1,
-        patch: 1
+        patch: 2
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -54,7 +54,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonDJQuit = "http://i.imgur.com/i4YkTFC.png";
         Lang.ui.buttonDJPlayShort = "http://i.imgur.com/SqU01C6.png";
         Lang.rollover.host = "O Chefão"
-        Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> plugbot load </em>"
+        Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emoção</em><br/>/me &nbsp; <em>Emoção</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Horários do chat (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> plugbot load </em>"
         $('#button-vote-negative').show();
         $('#button-chat-popout').click(function(){setTimeout(function(){EDTEnhanced.initPopout()},500)});
         function isOkTag(tag) {
@@ -305,9 +305,9 @@ initPopout : function(){
              };
         }
        if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/TNBUP/pb/master/pb.js')}};
-       if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"update"}));}}
-       if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
-       if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
+       if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){EDTEnhanced.socket.send(JSON.stringify({type:"update"}));}}
+       if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){EDTEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
+       if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
         if(value.substr(9) == 'on'){
         EDTEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));
         }
@@ -315,7 +315,7 @@ initPopout : function(){
         EDTEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}))}
         }
     }
-           if (value.indexOf('/raves')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
+           if (value.indexOf('/raves')===0){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
         if(value.substr(7) == 'on'){
         EDTEnhanced.socket.send(JSON.stringify({type:"rave",trigger:"true"}));
         }
@@ -323,7 +323,7 @@ initPopout : function(){
         EDTEnhanced.socket.send(JSON.stringify({type:"rave",trigger:"false"}))}
         }
     }
-      if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
+      if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
          var msg = value.substr(11);
          EDTEnhanced.socket.send(JSON.stringify({type:"broadcast",message:msg}))
             }
