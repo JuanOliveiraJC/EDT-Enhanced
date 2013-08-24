@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 1,
-        patch: 5
+        patch: 6
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -33,8 +33,8 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonVotePositive = "http://plug.dj/_/static/images/en/ButtonVotePositive.85cfc5a9.png";
         Lang.ui.buttonVotePositiveSelected = "http://plug.dj/_/static/images/en/ButtonVotePositiveSelected.c9947cb3.png";
         Lang.ui.buttonVotePositiveDisabled = "http://plug.dj/_/static/images/en/ButtonVotePositiveDisabled.ce7c40b3.png";
-        Lang.ui.buttonAddThis = "http://i.imgur.com/IwFRCVd.png";
-        Lang.ui.buttonAddThisDisabled = "http://i.imgur.com/IwFRCVd.png";   
+        Lang.ui.buttonAddThis = "https://dl.dropboxusercontent.com/u/198705975/add_this.png";
+        Lang.ui.buttonAddThisDisabled = "https://dl.dropboxusercontent.com/u/198705975/add_this.png";   
         Lang.ui.buttonSkipThis  = "http://i.imgur.com/kL3MvJm.png";
         Lang.rollover.fans = "Minions"
         Lang.messages.fanEnter = "Seu minion %NAME% acaba de entrar na sala"
@@ -157,7 +157,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('#button-dj-play').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
         $('#button-dj-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
         $('#dj-console').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/dj_booth2.gif); display:block; position:absolute; top:15px; width:317px;');
-        $('#button-add-this').attr('style','background-image:url(http://i.imgur.com/IwFRCVd.png);');
+        $('#button-add-this').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/add_this.png);');
         $('#meta-frame').css('background-color','transparent');
         $('#playback .frame-background').hide('.frame-background');
         $('#playback').css('background-color','transparent');
