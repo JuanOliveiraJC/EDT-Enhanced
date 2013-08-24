@@ -164,7 +164,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/background.jpg") no-repeat scroll center top #000000;}'
+            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/dnbr.jpg") no-repeat scroll center top #000000;}'
             + '#room-wheel {position:absolute;top:50px;}'
             + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
             + 'body {color:#66FFFF;}'
