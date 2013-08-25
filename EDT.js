@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 1,
-        patch: 7
+        patch: 8
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -156,7 +156,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('#button-dj-waitlist-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
         $('#button-dj-play').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
         $('#button-dj-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
-        $('#dj-console').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/dj_booth2.gif); display:block; position:absolute; top:15px; width:317px;');
+        $('#dj-console').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/dj_booth4.gif); display:block; position:absolute; top:15px; width:317px;');
         $('#button-add-this').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/add_this.png);');
         $('#meta-frame').css('background-color','transparent');
         $('#playback .frame-background').hide('.frame-background');
