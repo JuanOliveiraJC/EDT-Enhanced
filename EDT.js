@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 2,
-        patch: 1
+        patch: 2
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -279,6 +279,7 @@ initPopout : function(){
          if (data.fromID == '5105e7a23e083e5100cc1d96')
         {
             $('.chat-id-'+ data.chatID).attr('style','background-image:url(http://i.imgur.com/0xCw4kv.png);');
+            $('.chat-id-'+ data.chatID).css('color','#FF4500');
         }
         if (data.fromID === API.getUser().id && this.socket.readyState === SockJS.OPEN)
         this.socket.send(JSON.stringify({type:"chat",msg:data.message,chatID:data.chatID,username:data.from,ID:data.fromID,room:window.location.pathname.split('/')[1]}));
