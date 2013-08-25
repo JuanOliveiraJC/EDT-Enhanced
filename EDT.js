@@ -8,8 +8,8 @@ plugBot,
 EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
-        minor: 1,
-        patch: 9
+        minor: 2,
+        patch: 0
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -41,11 +41,11 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.messages.fanOf = "Você agora é minion de %NAME%."
         Lang.messages.unFanOf = "Você não é mais minion de %NAME%."
         Lang.messages.follow = "%NAME% agora é seu minion!"
-        Lang.messages.welcome = "Welcome to the bug.dj beta. Version %VERSION%"
+        Lang.messages.welcome = "Bem-vindo ao bug.dj versão %VERSION%"
         Lang.messages.cap = "Capping fuckers at %COUNT%"
-        Lang.rollover.becomeFan = "Virar um minion"
+        Lang.rollover.becomeFan = "Torna-se minion"
         Lang.rollover.fans = "Minions"
-        Lang.alerts.updateMesage ="bug.dj has been updated and requires a refresh. Click OK to refresh the page."
+        Lang.alerts.updateMesage ="bug.dj foi atualizado e você precisa atualizar a página. Clique em OK para atualizar"
         Lang.ui.buttonDJPlay = "http://i.imgur.com/SqU01C6.png";
         Lang.ui.buttonDJLeave = "http://i.imgur.com/i4YkTFC.png";
         Lang.ui.buttonDJWaitlistJoin = "http://i.imgur.com/SqU01C6.png";
@@ -84,8 +84,8 @@ EDTEnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem-vindo a sala Electro, Dubstep & Techno, script criado por The Notorious Bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
-        a.append('<div class="chat-update"><span style="color:#0000FF">Entre para o nosso grupo clicando</span> <a style="color:#0000FF" href="http://j.mp/14THjE0" target="_blank">aqui</a></div>');
-        a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa página clicando</span> <a style="color:#0000FF" href="http://j.mp/13KWqPd" target="_blank">aqui</a></div>');
+        a.append('<div class="chat-update"><span style="color:#0000FF">Cheque o nosso</span> <a href="http://j.mp/14THjE0" target="_blank">grupo</a></div>');
+        a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa</span> <a href="http://j.mp/13KWqPd" target="_blank">página</a></div>')
          b && a.scrollTop(a[0].scrollHeight);
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
