@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 0,
         minor: 2,
-        patch: 4
+        patch: 5
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -30,7 +30,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         String.prototype.prepareRegex = function() {
             return this.replace(/([\[\]\^\&\$\.\(\)\?\/\\\+\{\}\|])/g, "\\$1");
         };
-        Lang.ui.buttonVotePositive = "http://i.imgur.com/wplcgin.png";
+        Lang.ui.buttonVotePositive = "http://plug.dj/_/static/images/en/ButtonVotePositive.85cfc5a9.png";
         Lang.ui.buttonVotePositiveSelected = "http://plug.dj/_/static/images/en/ButtonVotePositiveSelected.c9947cb3.png";
         Lang.ui.buttonVotePositiveDisabled = "http://plug.dj/_/static/images/en/ButtonVotePositiveDisabled.ce7c40b3.png";
         Lang.ui.buttonAddThis = "https://dl.dropboxusercontent.com/u/198705975/add_this.png";
