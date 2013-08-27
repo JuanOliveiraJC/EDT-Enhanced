@@ -8,8 +8,8 @@ plugBot,
 EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
-        minor: 4,
-        patch: 9
+        minor: 5,
+        patch: 0
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -33,9 +33,9 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonVotePositive = "http://plug.dj/_/static/images/en/ButtonVotePositive.85cfc5a9.png";
         Lang.ui.buttonVotePositiveSelected = "http://plug.dj/_/static/images/en/ButtonVotePositiveSelected.c9947cb3.png";
         Lang.ui.buttonVotePositiveDisabled = "http://plug.dj/_/static/images/en/ButtonVotePositiveDisabled.ce7c40b3.png";
-        Lang.ui.buttonAddThis = "https://dl.dropboxusercontent.com/u/198705975/add_this.png";
-        Lang.ui.buttonAddThisDisabled = "https://dl.dropboxusercontent.com/u/198705975/add_this.png";   
-        Lang.ui.buttonSkipThis  = "https://dl.dropboxusercontent.com/u/198705975/skip_this.png";
+        Lang.ui.buttonAddThis = "http://i.imgur.com/irVbOK5.png";
+        Lang.ui.buttonAddThisDisabled = "http://i.imgur.com/irVbOK5.png";   
+        Lang.ui.buttonSkipThis  = "http://i.imgur.com/gDKkHH8.png";
         Lang.rollover.fans = "Minions"
         Lang.messages.fanEnter = "Seu minion %NAME% acaba de entrar na sala"
         Lang.messages.fanOf = "Você agora é minion de %NAME%."
@@ -46,13 +46,13 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.rollover.becomeFan = "Torna-se minion"
         Lang.rollover.fans = "Minions"
         Lang.alerts.updateMesage ="bug.dj foi atualizado e você precisa atualizar a página. Clique em OK para atualizar"
-        Lang.ui.buttonDJPlay = "https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png";
-        Lang.ui.buttonDJLeave = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
-        Lang.ui.buttonDJWaitlistJoin = "https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png";
-        Lang.ui.buttonDJWaitlistLeave = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
-        Lang.ui.buttonDJQuitShort = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
-        Lang.ui.buttonDJQuit = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
-        Lang.ui.buttonDJPlayShort = "https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png";
+        Lang.ui.buttonDJPlay = "http://i.imgur.com/mU73z92.png";
+        Lang.ui.buttonDJLeave = "http://i.imgur.com/buJh0HE.png";
+        Lang.ui.buttonDJWaitlistJoin = "http://i.imgur.com/mU73z92.png";
+        Lang.ui.buttonDJWaitlistLeave = "http://i.imgur.com/buJh0HE.png";
+        Lang.ui.buttonDJQuitShort = "http://i.imgur.com/buJh0HE.png";
+        Lang.ui.buttonDJQuit = "http://i.imgur.com/buJh0HE.png";
+        Lang.ui.buttonDJPlayShort = "http://i.imgur.com/mU73z92.png";
         Lang.rollover.host = "O Chefão"
         Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emoção</em><br/>/me &nbsp; <em>Emoção</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Horários do chat (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> Liga o plugBot </em>"
         $('#button-vote-negative').show();
@@ -153,12 +153,12 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('#room-wheel').css('background-repeat','no-repeat');
         $('#room-wheel').css('background-position','500px 235px');
         $('#meta-frame .frame-background').hide('.frame-background');
-        $('#button-dj-waitlist-join').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png); display: block;');
+        $('#button-dj-waitlist-join').attr('style','background-image:url(http://i.imgur.com/mU73z92.png); display: block;');
         $('#button-dj-waitlist-leave').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png); display: block;');
-        $('#button-dj-play').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png); display: block;');
+        $('#button-dj-play').attr('style','background-image:url(http://i.imgur.com/mU73z92.png); display: block;');
         $('#button-dj-leave').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png); display: block;');
         $('#dj-console').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/dj_booth4.gif); display:block; position:absolute; top:15px; width:317px;');
-        $('#button-add-this').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/add_this.png);');
+        $('#button-add-this').attr('style','background-image:url(http://i.imgur.com/irVbOK5.png);');
         $('#meta-frame').css('background-color','transparent');
         $('#playback .frame-background').hide('.frame-background');
         $('#playback').css('background-color','transparent');
