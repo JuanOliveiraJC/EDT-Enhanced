@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 3,
-        patch: 5
+        patch: 6
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -192,7 +192,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '.chat-emote {color:#FCFF00;}'    
             + '.chat-emote .chat-from {color:#FCFF00;}'
             + '.chat-emote .chat-text, .chat-system .chat-text {color:#FCFF00;}'
-            + '.chat-host {background-image: url("https://dl.dropboxusercontent.com/u/198705975/host.png");}'
+            + '.chat-host {background-image: url("https://dl.dropboxusercontent.com/u/198705975/host_icon.png");}'
             + '.chat-cohost {background-image: url("https://dl.dropboxusercontent.com/u/198705975/cohost_icon.png");}'
             + '.chat-manager{background-image: url("https://dl.dropboxusercontent.com/u/198705975/manager_icon.png");}'
             + '.chat-bouncer{background-image: url("https://dl.dropboxusercontent.com/u/198705975/bouncer_icon.png");}' 
