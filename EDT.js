@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 4,
-        patch: 8
+        patch: 9
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -83,7 +83,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT,this.proxy.onChat)
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
-        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem-vindo a sala Electro, Dubstep & Techno, script criado por The Notorious Bruce versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
+        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem-vindo a sala Electro, Dubstep & Techno, script criado por The Notorious Bruce, Colgate e thedark1337 versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
         a.append('<div class="chat-update"><span style="color:#0000FF">Cheque o nosso</span> <a href="http://j.mp/14THjE0" target="_blank">grupo</a></div>');
         a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa</span> <a href="http://j.mp/13KWqPd" target="_blank">página</a></div>');
         a.append('<div class="chat-updata"><span style="color:#FFFF00">Inscreva-se no canal no <a style="color:#FFFFFF" href="http://j.mp/canaledt" target="_blank">You</a> <a style="color:#FF0000" href="http://j.mp/canaledt" target="_blank">Tube</a></div>')
@@ -346,7 +346,7 @@ initPopout : function(){
     },
 
     Socket: function(){
-        this.socket = new SockJS('http://socket.plugpony.net:923/gateway');
+        this.socket = new SockJS('http://thedark1337.asuscomm.com:984/echo');
         this.socket.tries = 0;
 
         this.socket.onopen =  function() {
