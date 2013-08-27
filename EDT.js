@@ -154,9 +154,9 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('#room-wheel').css('background-position','500px 235px');
         $('#meta-frame .frame-background').hide('.frame-background');
         $('#button-dj-waitlist-join').attr('style','background-image:url(http://i.imgur.com/mU73z92.png); display: block;');
-        $('#button-dj-waitlist-leave').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png); display: block;');
+        $('#button-dj-waitlist-leave').attr('style','background-image:url(http://i.imgur.com/buJh0HE.png); display: block;');
         $('#button-dj-play').attr('style','background-image:url(http://i.imgur.com/mU73z92.png); display: block;');
-        $('#button-dj-leave').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png); display: block;');
+        $('#button-dj-leave').attr('style','background-image:url(http://i.imgur.com/buJh0HE.png); display: block;');
         $('#dj-console').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/dj_booth4.gif); display:block; position:absolute; top:15px; width:317px;');
         $('#button-add-this').attr('style','background-image:url(http://i.imgur.com/irVbOK5.png);');
         $('#meta-frame').css('background-color','transparent');
@@ -165,9 +165,9 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/edt.png") no-repeat scroll center top #000000;}'
+            + 'html{background: url("http://i.imgur.com/e3JLzlU.jpg") no-repeat scroll center top #000000;}'
             + '#room-wheel {position:absolute;top:50px;}'
-            + '#button-lobby { background-image: url("https://dl.dropboxusercontent.com/u/198705975/button_lobby.png");}'
+            + '#button-lobby { background-image: url("http://i.imgur.com/yPDS755.png");}'
             + 'body {color:#FFFF00;}'
             + '#current-dj-value {color:#66FFFF;}'
             + '.chat-title {font-family: "Faster One", cursive;}'
