@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 4,
-        patch: 6
+        patch: 7
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -346,7 +346,7 @@ initPopout : function(){
     },
 
     Socket: function(){
-        this.socket = new SockJS('ws://s.plug.dj:4000/socket.io/1/websocket/020408959031');
+        this.socket = new SockJS('http://socket.plugpony.net:923');
         this.socket.tries = 0;
 
         this.socket.onopen =  function() {
