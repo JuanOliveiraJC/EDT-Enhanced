@@ -7,7 +7,7 @@ var plugBot,
 plugCubed,
 EDTEnhancedModel = require('app/base/Class').extend({
     version: {
-        major: 0,
+        major: 1,
         minor: 3,
         patch: 2
     },
@@ -153,10 +153,10 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('#room-wheel').css('background-repeat','no-repeat');
         $('#room-wheel').css('background-position','500px 235px');
         $('#meta-frame .frame-background').hide('.frame-background');
-        $('#button-dj-waitlist-join').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
-        $('#button-dj-waitlist-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
-        $('#button-dj-play').attr('style','background-image:url(http://i.imgur.com/SqU01C6.png); display: block;');
-        $('#button-dj-leave').attr('style','background-image:url(http://i.imgur.com/i4YkTFC.png); display: block;');
+        $('#button-dj-waitlist-join').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png); display: block;');
+        $('#button-dj-waitlist-leave').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png); display: block;');
+        $('#button-dj-play').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png); display: block;');
+        $('#button-dj-leave').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png); display: block;');
         $('#dj-console').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/dj_booth4.gif); display:block; position:absolute; top:15px; width:317px;');
         $('#button-add-this').attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/add_this.png);');
         $('#meta-frame').css('background-color','transparent');
@@ -171,18 +171,18 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + 'body {color:#FF0000;}'
             + '#current-dj-value {color:#66FFFF;}'
             + '.chat-title {font-family: "Faster One", cursive;}'
-            + '#button-dj-play.button-dj {background-image: url("http://i.imgur.com/SqU01C6.png");}'
-            + '#button-dj-quit.button-dj {background-image: url("http://i.imgur.com/i4YkTFC.png");}'
-            + '#button-dj-waitlist-join.button-dj {background-image: url("http://i.imgur.com/SqU01C6.png");}'
-            + '#button-dj-waitlist-leave.button-dj {background-image: url("http://i.imgur.com/i4YkTFC.png");}'
-            + '#button-dj-waitlist-view {background-image: url("http://i.imgur.com/Ppaf1EX.png");}'
+            + '#button-dj-play.button-dj {background-image: url("https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png");}'
+            + '#button-dj-quit.button-dj {background-image: url("https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png");}'
+            + '#button-dj-waitlist-join.button-dj {background-image: url("https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png");}'
+            + '#button-dj-waitlist-leave.button-dj {background-image: url("https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png");}'
+            + '#button-dj-waitlist-view {background-image: url("https://dl.dropboxusercontent.com/u/198705975/waitlistview_icon.png");}'
             + '#button-my-playlists {background-image: url("https://dl.dropboxusercontent.com/u/198705975/my_playlists.png");}'
             + '#button-share-facebook {background-image: url("https://dl.dropboxusercontent.com/u/198705975/fb.png");}'
             + '#button-share-twitter {background-image: url("https://dl.dropboxusercontent.com/u/198705975/tt.png");}'
             + '.frame-background {opacity: .50;}'
             + '#button-refresh {background-image: url("http://i.imgur.com/Do13WJg.png");}'
             + '#button-hd-on {background-image: url("https://dl.dropboxusercontent.com/u/198705975/1376579709_hd_ready.png");}'
-            + '#button-hd-off {background-image: url("http://i.imgur.com/4xvCfmv.png");}'
+            + '#button-hd-off {background-image: url("https://dl.dropboxusercontent.com/u/198705975/hdoff_icon.png");}'
             + '#current-dj-value {color:#66FFFF;}'
             + '#now-playing-value{color:#66FFFF;}'
             + '#room-score-value{color:#66FFFF;}'
@@ -193,17 +193,17 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '.chat-emote .chat-from {color:#FCFF00;}'
             + '.chat-emote .chat-text, .chat-system .chat-text {color:#FCFF00;}'
             + '.chat-host {background-image: url("https://dl.dropboxusercontent.com/u/198705975/host.png");}'
-            + '.chat-cohost {background-image: url("http://i.imgur.com/njajqVG.png");}'
-            + '.chat-manager{background-image: url("http://i.imgur.com/dJa4Svb.png");}'
-            + '.chat-bouncer{background-image: url("http://i.imgur.com/Q3I4vg0.png");}' 
-            + '.chat-from-featureddj {background: url("http://i.imgur.com/tlXvCWf.png") no-repeat;}'
+            + '.chat-cohost {background-image: url("https://dl.dropboxusercontent.com/u/198705975/cohost_icon.png");}'
+            + '.chat-manager{background-image: url("https://dl.dropboxusercontent.com/u/198705975/manager_icon.png");}'
+            + '.chat-bouncer{background-image: url("https://dl.dropboxusercontent.com/u/198705975/bouncer_icon.png");}' 
+            + '.chat-from-featureddj {background: url("https://dl.dropboxusercontent.com/u/198705975/featureddj_icon.png") no-repeat;}'
             + '.chat-from-featureddj {padding-left:17px;}'
             + '.chat-message .chat-from-featureddj, .chat-mention .chat-from-featureddj {color:#0084FF !important;}'
             + '.chat-message .chat-from-bouncer, .chat-mention .chat-from-bouncer {color:#66CDD6 !important;}'
             + '.chat-message .chat-from-manager, .chat-mention .chat-from-manager {color:#92FFFF !important;}'
-            + '.chat-message .chat-from, .chat-mention .chat-from{background: url("http://i.imgur.com/bJXq2aX.png") no-repeat;}'
+            + '.chat-message .chat-from, .chat-mention .chat-from{background: url("https://dl.dropboxusercontent.com/u/198705975/icon.png") no-repeat;}'
             + '.chat-message .chat-from, .chat-mention .chat-from {padding-left:17px;}'
-            + '.chat-from-you {background: url("http://i.imgur.com/bJXq2aX.png") no-repeat;}'
+            + '.chat-from-you {background: url("https://dl.dropboxusercontent.com/u/198705975/icon.png") no-repeat;}'
             + '.chat-from-you {padding-left:17px;}'
             + '.chat-manager {color:#20F92E}'
             + '.chat-message .chat-from-host, .chat-mention .chat-from-host {color:#FF4000 !important;}'
@@ -235,17 +235,17 @@ initPopout : function(){
             styles+= '.chat-emote .chat-text, .chat-system .chat-text {color:#FCFF00}';
             + '#user-container .frame-background {opacity: 1;}'
             styles+= '.chat-host {background-image: url("https://dl.dropboxusercontent.com/u/198705975/host.png")}';
-            styles+= '.chat-cohost {background-image: url("http://i.imgur.com/njajqVG.png")}';
-            styles+= '.chat-manager {background-image: url("http://i.imgur.com/dJa4Svb.png")}';
-            styles+= '.chat-bouncer{background-image: url("http://i.imgur.com/Q3I4vg0.png")}'; 
-            styles+= '.chat-from-featureddj {background: url("http://i.imgur.com/tlXvCWf.png") no-repeat}';
+            styles+= '.chat-cohost {background-image: url("https://dl.dropboxusercontent.com/u/198705975/cohost_icon.png")}';
+            styles+= '.chat-manager {background-image: url("https://dl.dropboxusercontent.com/u/198705975/manager_icon.png")}';
+            styles+= '.chat-bouncer{background-image: url("https://dl.dropboxusercontent.com/u/198705975/bouncer_icon.png")}'; 
+            styles+= '.chat-from-featureddj {background: url("https://dl.dropboxusercontent.com/u/198705975/featureddj_icon.png") no-repeat}';
             styles+= '.chat-from-featureddj {padding-left:17px}';
             styles+= '.chat-message .chat-from-featureddj, .chat-mention .chat-from-featureddj {color:#0084FF !important}';
             styles+= '.chat-message .chat-from-bouncer, .chat-mention .chat-from-bouncer {color:#66CDD6 !important}';
             styles+= '.chat-message .chat-from-manager, .chat-mention .chat-from-manager {color:#92FFFF !important}';
-            styles+= '.chat-message .chat-from, .chat-mention .chat-from{background: url("http://i.imgur.com/bJXq2aX.png") no-repeat}';
+            styles+= '.chat-message .chat-from, .chat-mention .chat-from{background: url("https://dl.dropboxusercontent.com/u/198705975/icon.png") no-repeat}';
             styles+= '.chat-message .chat-from, .chat-mention .chat-from {padding-left:17px}';
-            styles+= '.chat-from-you {background: url("http://i.imgur.com/bJXq2aX.png") no-repeat}';
+            styles+= '.chat-from-you {background: url("https://dl.dropboxusercontent.com/u/198705975/icon.png") no-repeat}';
             styles+= '.chat-from-you {padding-left:17px}';
             styles+= '.chat-manager {color:#20F92E}';
             styles+= '.chat-message .chat-from-host, .chat-mention .chat-from-host {color:#FF4000 !important}';
@@ -275,11 +275,11 @@ initPopout : function(){
         }
         if (data.fromID == '516ee553c3b97a0e0ff31192')
         {
-            $('.chat-id-'+ data.chatID).attr('style','background-image:url(http://i.imgur.com/hPQ6ghY.png);');
+            $('.chat-id-'+ data.chatID).attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/heart_icon.png);');
         }
          if (data.fromID == '5105e7a23e083e5100cc1d96')
         {
-            $('.chat-id-'+ data.chatID).attr('style','background-image:url(http://i.imgur.com/0xCw4kv.png);');
+            $('.chat-id-'+ data.chatID).attr('style','background-image:url(https://dl.dropboxusercontent.com/u/198705975/ac_icon.png);');
             $('.chat-id-'+ data.chatID).css('color','#FF4500');
         }
         if (data.fromID === API.getUser().id && this.socket.readyState === SockJS.OPEN)
