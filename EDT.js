@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 3,
-        patch: 4
+        patch: 5
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -54,7 +54,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonDJQuit = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
         Lang.ui.buttonDJPlayShort = "https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png";
         Lang.rollover.host = "O Chefão"
-        Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emoção</em><br/>/me &nbsp; <em>Emoção</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Horários do chat (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> plugCubed load </em>"
+        Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emoção</em><br/>/me &nbsp; <em>Emoção</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Horários do chat (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> Liga o plugBot </em>"
         $('#button-vote-negative').show();
         $('#button-chat-popout').click(function(){setTimeout(function(){EDTEnhanced.initPopout()},500)});
         function isOkTag(tag) {
