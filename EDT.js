@@ -3,13 +3,13 @@ if (EDTEnhanced !== undefined)
 String.prototype.equalsIgnoreCase = function(other) {
     return this.toLowerCase() === other.toLowerCase();
 };
-var plugBot,
-plugCubed,
+var plugCubed,
+plugBot,
 EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 3,
-        patch: 2
+        patch: 3
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -89,7 +89,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-updata"><span style="color:#FFFF00">Inscreva-se no canal no <a style="color:#FFFFFF" href="http://j.mp/canaledt" target="_blank">You</a> <a style="color:#FF0000" href="http://j.mp/canaledt" target="_blank">Tube</a></div>')
          b && a.scrollTop(a[0].scrollHeight);
         this.removeElements();
-        if (plugBot == undefined) $.getScript("https://raw.github.com/TNBUP/pb/master/pb.js")
+        if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
             window.alert = function(data){
             var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
             a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><strong>[Window Alert]</strong></span><span style="color:#FFFFFF"> : ' + data + '</span></div>'); 
@@ -139,10 +139,10 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.chat.help = "<strong>Chat Commands:</strong><br/>/em &nbsp; <em>Emote</em><br/>/me &nbsp; <em>Emote</em><br/>/clear &nbsp; <em>Clear Chat History</em><br/>/cap # &nbsp; <em>Limits the number of avatars rendered (1-200)</em><br/>/ts # &nbsp; <em>Chat timestamps (12, 24, 0)</em><br/>/emoji on (or off) <em>Enable/disable Emojis</em>"        
         API.off(API.CHAT,this.proxy.onChat)
         API.off(API.CHAT_COMMAND,this.customChatCommand)
-        if(plugBot != undefined) plugBot.close();
-        plugBot = undefined
         if(plugCubed != undefined) plugCubed.close();
         plugCubed = undefined
+        if(plugBot != undefined) plugBot.close();
+        plugBot = undefined
         if (this.socket) {
         this.socket.onclose = function() {};
         this.socket.close();
@@ -305,7 +305,7 @@ initPopout : function(){
                 avatar = new avatar('halloween0'+ i);
              };
         }
-       if (value == '/Auto On'){if(plugCubed == undefined){$.getScript('http://plugCubed.com/compiled/plugCubed.min.js')}};
+       if (value == '/Auto On'){if(plugCubed == undefined){$.getScript('https://raw.github.com/TNBUP/pb/master/pb.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){EDTEnhanced.socket.send(JSON.stringify({type:"update"}));}}
        if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){EDTEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
        if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
