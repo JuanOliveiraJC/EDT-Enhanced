@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 3,
-        patch: 3
+        patch: 4
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -46,13 +46,13 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.rollover.becomeFan = "Torna-se minion"
         Lang.rollover.fans = "Minions"
         Lang.alerts.updateMesage ="bug.dj foi atualizado e você precisa atualizar a página. Clique em OK para atualizar"
-        Lang.ui.buttonDJPlay = "http://i.imgur.com/SqU01C6.png";
-        Lang.ui.buttonDJLeave = "http://i.imgur.com/i4YkTFC.png";
-        Lang.ui.buttonDJWaitlistJoin = "http://i.imgur.com/SqU01C6.png";
-        Lang.ui.buttonDJWaitlistLeave = "http://i.imgur.com/i4YkTFC.png";
-        Lang.ui.buttonDJQuitShort = "http://i.imgur.com/i4YkTFC.png";
-        Lang.ui.buttonDJQuit = "http://i.imgur.com/i4YkTFC.png";
-        Lang.ui.buttonDJPlayShort = "http://i.imgur.com/SqU01C6.png";
+        Lang.ui.buttonDJPlay = "https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png";
+        Lang.ui.buttonDJLeave = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
+        Lang.ui.buttonDJWaitlistJoin = "https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png";
+        Lang.ui.buttonDJWaitlistLeave = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
+        Lang.ui.buttonDJQuitShort = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
+        Lang.ui.buttonDJQuit = "https://dl.dropboxusercontent.com/u/198705975/djleave_icon.png";
+        Lang.ui.buttonDJPlayShort = "https://dl.dropboxusercontent.com/u/198705975/djjoin_icon.png";
         Lang.rollover.host = "O Chefão"
         Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emoção</em><br/>/me &nbsp; <em>Emoção</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Horários do chat (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> plugCubed load </em>"
         $('#button-vote-negative').show();
@@ -180,7 +180,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '#button-share-facebook {background-image: url("https://dl.dropboxusercontent.com/u/198705975/fb.png");}'
             + '#button-share-twitter {background-image: url("https://dl.dropboxusercontent.com/u/198705975/tt.png");}'
             + '.frame-background {opacity: .50;}'
-            + '#button-refresh {background-image: url("http://i.imgur.com/Do13WJg.png");}'
+            + '#button-refresh {background-image: url("https://dl.dropboxusercontent.com/u/198705975/refresh_icon.png");}'
             + '#button-hd-on {background-image: url("https://dl.dropboxusercontent.com/u/198705975/1376579709_hd_ready.png");}'
             + '#button-hd-off {background-image: url("https://dl.dropboxusercontent.com/u/198705975/hdoff_icon.png");}'
             + '#current-dj-value {color:#66FFFF;}'
@@ -214,7 +214,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '.chat-text a:visited {color:#22FF00;}'
             + '.chat-text a:hover {color:#EF00FF;}'
             + '.chat-text a:active {color:#66FFFF;}'
-            + '#volume-bar-value {background-image: url("http://i.imgur.com/HF5pnAR.png");}' 
+            + '#volume-bar-value {background-image: url("https://dl.dropboxusercontent.com/u/198705975/volumebar_icon.png");}' 
         + '</style>');
 },
 initPopout : function(){
@@ -256,7 +256,7 @@ initPopout : function(){
             styles+= '.chat-text a:visited {color:#22FF00}';
             styles+= '.chat-text a:hover {color:#EF00FF}';
             styles+= '.chat-text a:active {color:#66FFFF}';
-            styles+= '#volume-bar-value {background-image: url("http://i.imgur.com/HF5pnAR.png")}'; 
+            styles+= '#volume-bar-value {background-image: url("https://dl.dropboxusercontent.com/u/198705975/volumebar_icon.png")}'; 
             if (css.styleSheet) css.styleSheet.cssText = styles;
             else css.appendChild(document.createTextNode(styles));
             popout._window.document.head.appendChild(css);
