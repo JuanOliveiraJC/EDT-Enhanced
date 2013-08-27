@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 5,
-        patch: 0
+        patch: 1
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -306,9 +306,9 @@ initPopout : function(){
              };
         }
        if (value == '/Auto On'){if(plugCubed == undefined){$.getScript('https://raw.github.com/TNBUP/pb/master/pb.js')}};
-       if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){EDTEnhanced.socket.send(JSON.stringify({type:"update"}));}}
-       if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){EDTEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
-       if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
+       if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"update"}));}}
+       if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
+       if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
         if(value.substr(9) == 'on'){
         EDTEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"true"}));
         }
@@ -316,7 +316,7 @@ initPopout : function(){
         EDTEnhanced.socket.send(JSON.stringify({type:"strobe",trigger:"false"}))}
         }
     }
-           if (value.indexOf('/raves')===0){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
+           if (value.indexOf('/raves')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
         if(value.substr(7) == 'on'){
         EDTEnhanced.socket.send(JSON.stringify({type:"rave",trigger:"true"}));
         }
@@ -324,7 +324,7 @@ initPopout : function(){
         EDTEnhanced.socket.send(JSON.stringify({type:"rave",trigger:"false"}))}
         }
     }
-      if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.MANAGER) && API.getUser().id == '5105e7a23e083e5100cc1d96'){
+      if (value.indexOf('/broadcast')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
          var msg = value.substr(11);
          EDTEnhanced.socket.send(JSON.stringify({type:"broadcast",message:msg}))
             }
