@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 5,
-        patch: 1
+        patch: 3
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -165,7 +165,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
-            + 'html{background: url("http://i.imgur.com/e3JLzlU.jpg") no-repeat scroll center top #000000;}'
+            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/edt.png") no-repeat scroll center top #000000;}'
             + '#room-wheel {position:absolute;top:50px;}'
             + '#button-lobby { background-image: url("http://i.imgur.com/yPDS755.png");}'
             + 'body {color:#FFFF00;}'
@@ -175,7 +175,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '#button-dj-quit.button-dj {background-image: url("http://i.imgur.com/buJh0HE.png");}'
             + '#button-dj-waitlist-join.button-dj {background-image: url("http://i.imgur.com/mU73z92.png");}'
             + '#button-dj-waitlist-leave.button-dj {background-image: url("http://i.imgur.com/buJh0HE.png");}'
-            + '#button-dj-waitlist-view {background-image: url("hhttp://i.imgur.com/7lbe5Oy.png");}'
+            + '#button-dj-waitlist-view {background-image: url("http://i.imgur.com/7lbe5Oy.png");}'
             + '#button-my-playlists {background-image: url("http://i.imgur.com/hjRcSaU.png");}'
             + '#button-share-facebook {background-image: url("http://i.imgur.com/xDOIeMj.png");}'
             + '#button-share-twitter {background-image: url("http://i.imgur.com/49Vg1X5.png");}'
