@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 5,
-        patch: 5
+        patch: 6
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -213,7 +213,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '.chat-text a:visited {color:#22FF00;}'
             + '.chat-text a:hover {color:#EF00FF;}'
             + '.chat-text a:active {color:#66FFFF;}'
-            + '#volume-bar-value {background-image: url("http://i.imgur.com/LvzZ0R0.png");}' 
+            + '#volume-bar-value {background-image: url("http://i.imgur.com/xmyonON.png");}' 
         + '</style>');
 },
 initPopout : function(){
@@ -255,7 +255,7 @@ initPopout : function(){
             styles+= '.chat-text a:visited {color:#22FF00}';
             styles+= '.chat-text a:hover {color:#EF00FF}';
             styles+= '.chat-text a:active {color:#66FFFF}';
-            styles+= '#volume-bar-value {background-image: url("http://i.imgur.com/LvzZ0R0.png")}'; 
+            styles+= '#volume-bar-value {background-image: url("http://i.imgur.com/xmyonON.png")}'; 
             if (css.styleSheet) css.styleSheet.cssText = styles;
             else css.appendChild(document.createTextNode(styles));
             popout._window.document.head.appendChild(css);
