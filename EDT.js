@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 5,
-        patch: 6
+        patch: 7
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -43,7 +43,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.messages.follow = "%NAME% agora é seu minion!"
         Lang.messages.welcome = "Bem-vindo ao bug.dj versão %VERSION%"
         Lang.messages.cap = "Capping fuckers at %COUNT%"
-        Lang.rollover.becomeFan = "Torna-se minion"
+        Lang.rollover.becomeFan = "Torna-se minion de %NAME%"
         Lang.rollover.fans = "Minions"
         Lang.alerts.updateMesage ="bug.dj foi atualizado e você precisa atualizar a página. Clique em OK para atualizar"
         Lang.ui.buttonDJPlay = "http://i.imgur.com/mU73z92.png";
@@ -85,7 +85,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem-vindo a sala Electro, Dubstep & Techno, script criado por The Notorious Bruce, Colgate e thedark1337 versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
         a.append('<div class="chat-update"><span style="color:#0000FF">Cheque o nosso</span> <a href="http://j.mp/14THjE0" target="_blank">grupo</a></div>');
         a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa</span> <a href="http://j.mp/13KWqPd" target="_blank">página</a></div>');
-        a.append('<div class="chat-updata"><span style="color:#FFFF00">Inscreva-se no canal no <a style="color:#FFFFFF" href="http://j.mp/canaledt" target="_blank">You</a> <a style="color:#FF0000" href="http://j.mp/canaledt" target="_blank">Tube</a></div>')
+        a.append('<div class="chat-updata"><span style="color:#FFFF00">Inscreva-se no nosso canal no <a style="color:#FFFFFF" href="http://j.mp/canaledt" target="_blank">You</a> <a style="color:#FF0000" href="http://j.mp/canaledt" target="_blank">Tube</a></div>')
          b && a.scrollTop(a[0].scrollHeight);
         this.removeElements();
         if (plugCubed == undefined) $.getScript("http://plugCubed.com/compiled/plugCubed.min.js")
