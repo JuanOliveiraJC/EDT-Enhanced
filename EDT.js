@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 5,
-        patch: 7
+        patch: 8
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -43,7 +43,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.messages.follow = "%NAME% agora é seu minion!"
         Lang.messages.welcome = "Bem-vindo ao bug.dj versão %VERSION%"
         Lang.messages.cap = "Capping fuckers at %COUNT%"
-        Lang.rollover.becomeFan = "Torna-se minion de %NAME%"
+        Lang.rollover.becomeFan = "Torna-se minion"
         Lang.rollover.fans = "Minions"
         Lang.alerts.updateMesage ="bug.dj foi atualizado e você precisa atualizar a página. Clique em OK para atualizar"
         Lang.ui.buttonDJPlay = "http://i.imgur.com/mU73z92.png";
