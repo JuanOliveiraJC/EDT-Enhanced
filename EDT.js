@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 9,
-        patch: 4
+        patch: 3
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -38,14 +38,14 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonSkipThis  = "http://i.imgur.com/gDKkHH8.png";
         Lang.rollover.fans = "Minions"
         Lang.messages.fanEnter = "Seu minion %NAME% acaba de entrar na sala"
-        Lang.messages.fanOf = "Você agora é minion de %NAME%."
-        Lang.messages.unFanOf = "Você não é mais minion de %NAME%."
-        Lang.messages.follow = "%NAME% agora é seu minion!"
-        Lang.messages.welcome = "Bem-vindo ao bug.dj versão %VERSION%"
+        Lang.messages.fanOf = "Vocï¿½ agora ï¿½ minion de %NAME%."
+        Lang.messages.unFanOf = "Vocï¿½ nï¿½o ï¿½ mais minion de %NAME%."
+        Lang.messages.follow = "%NAME% agora ï¿½ seu minion!"
+        Lang.messages.welcome = "Bem-vindo ao bug.dj versï¿½o %VERSION%"
         Lang.messages.cap = "Capping fuckers at %COUNT%"
         Lang.rollover.becomeFan = "Torna-se minion"
         Lang.rollover.fans = "Minions"
-        Lang.alerts.updateMesage ="bug.dj foi atualizado e você precisa atualizar a página. Clique em OK para atualizar"
+        Lang.alerts.updateMesage ="bug.dj foi atualizado e vocï¿½ precisa atualizar a pï¿½gina. Clique em OK para atualizar"
         Lang.ui.buttonDJPlay = "http://i.imgur.com/mU73z92.png";
         Lang.ui.buttonDJLeave = "http://i.imgur.com/buJh0HE.png";
         Lang.ui.buttonDJWaitlistJoin = "http://i.imgur.com/mU73z92.png";
@@ -53,8 +53,8 @@ EDTEnhancedModel = require('app/base/Class').extend({
         Lang.ui.buttonDJQuitShort = "http://i.imgur.com/buJh0HE.png";
         Lang.ui.buttonDJQuit = "http://i.imgur.com/buJh0HE.png";
         Lang.ui.buttonDJPlayShort = "http://i.imgur.com/mU73z92.png";
-        Lang.rollover.host = "O Chefão"
-        Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emoção</em><br/>/me &nbsp; <em>Emoção</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Horários do chat (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> Liga o plugBot </em>"
+        Lang.rollover.host = "O Chefï¿½o"
+        Lang.chat.help = "<strong>Comandos do Chat:</strong><br/>/em &nbsp; <em>Emoï¿½ï¿½o</em><br/>/me &nbsp; <em>Emoï¿½ï¿½o</em><br/>/clear &nbsp; <em>Limpa o Chat</em><br/>/cap # &nbsp; <em>Limita o numero de avatares a serem carregados (1-200)</em><br/>/ts # &nbsp; <em>Horï¿½rios do chat (12, 24, 0)</em><br />/emoji on (or off) <em>Habilita/Desablita os emojis</em><br /> /strobe on/off &nbsp; <em>Strobes on/off</em><br /> /rave on/off &nbsp; <em>Luzes on/off</em><br />/close &nbsp; <em>Fecha o script</em> <br /> /Avatar # &nbsp; <em> muda o seu avatar para um de halloween ( # = 1-13)</em> <br /> /Auto On &nbsp; <em> Liga o plugBot </em>"
         $('#button-chat-popout').click(function(){setTimeout(function(){EDTEnhanced.initPopout()},500)});
         function isOkTag(tag) {
             return (",pre,blockquote,code,input,button,textarea".indexOf(","+tag) == -1);
@@ -82,9 +82,9 @@ EDTEnhancedModel = require('app/base/Class').extend({
         API.on(API.CHAT,this.proxy.onChat)
         API.on(API.CHAT_COMMAND,this.customChatCommand)
          var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
-        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem-vindo a sala Electro, Dubstep & Techno, script criado por The Notorious Bruce, Colgate e thedark1337 versão ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
+        a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><i>Bem-vindo a sala Electro, Dubstep & Techno, script criado por The Notorious Bruce, Colgate e thedark1337 versï¿½o ' + this.version.major + '.' + this.version.minor + '.' + this.version.patch + '</i></span></div>');
         a.append('<div class="chat-update"><span style="color:#0000FF">Cheque o nosso</span> <a href="http://j.mp/14THjE0" target="_blank">grupo</a></div>');
-        a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa</span> <a href="http://j.mp/13KWqPd" target="_blank">página</a></div>');
+        a.append('<div class="chat-update"><span style="color:#0000FF">Curta nossa</span> <a href="http://j.mp/13KWqPd" target="_blank">pï¿½gina</a></div>');
         a.append('<div class="chat-updata"><span style="color:#FFFF00">Inscreva-se no nosso canal no <a style="color:#FFFFFF" href="http://j.mp/canaledt" target="_blank">You</a> <a style="color:#FF0000" href="http://j.mp/canaledt" target="_blank">Tube</a></div>')
          b && a.scrollTop(a[0].scrollHeight);
         this.removeElements();
@@ -164,7 +164,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/edt.png") no-repeat scroll center top #000000;}'
+            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/micky_jackson.png") repeat scroll center top #000000;}'
             + '#room-wheel {position:absolute;top:50px;}'
             + '#button-lobby { background-image: url("http://i.imgur.com/yPDS755.png");}'
             + 'body {color:#FF0000;}'
@@ -364,12 +364,12 @@ initPopout : function(){
         if(data.type === 'update'){
             EDTEnhanced.socket.onclose = function (){};
             EDTEnhanced.socket.close();
-            API.chatLog('Nova versão do script EDT lançada, atualização em alguns segundos...');
+            API.chatLog('Nova versï¿½o do script EDT lanï¿½ada, atualizaï¿½ï¿½o em alguns segundos...');
             setTimeout(function() {$.getScript('https://raw.github.com/TNBUP/EDT-Enhanced/master/EDT.js')},5000)
             return;
         }
         if(data.type === 'reload'){
-            API.chatLog('recarregando o script de todos os usuários, espere um momento...')
+            API.chatLog('recarregando o script de todos os usuï¿½rios, espere um momento...')
             setTimeout(function(){location.reload();},5000);
         }
         if(data.type ==='strobe'){
