@@ -8,8 +8,8 @@ plugBot,
 EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
-        minor: 6,
-        patch: 9
+        minor: 7,
+        patch: 0
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -304,7 +304,7 @@ initPopout : function(){
                 avatar = new avatar('halloween0'+ i);
              };
         }
-       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/TNBUP/pb/master/pb.js')}};
+       if (value == '/Auto On'){if(plugBot == undefined){$.getScript('https://raw.github.com/ebola777/Plugbot-Enhanced-by-Ebola/master/script/main.min.js')}};
        if (value =='/update'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"update"}));}}
        if (value =='/reload'){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){EDTEnhanced.socket.send(JSON.stringify({type:"reload"}));}}
        if (value.indexOf('/strobes')===0){if(API.hasPermission(API.getUser().id,API.ROLE.HOST) && API.getUser().id == '50b1961c96fba57db2230417'){
