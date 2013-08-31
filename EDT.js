@@ -8,7 +8,7 @@ plugBot,
 EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
-        minor: 7,
+        minor: 9,
         patch: 3
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
