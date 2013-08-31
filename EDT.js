@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 6,
-        patch: 8
+        patch: 9
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -88,7 +88,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         a.append('<div class="chat-updata"><span style="color:#FFFF00">Inscreva-se no nosso canal no <a style="color:#FFFFFF" href="http://j.mp/canaledt" target="_blank">You</a> <a style="color:#FF0000" href="http://j.mp/canaledt" target="_blank">Tube</a></div>')
          b && a.scrollTop(a[0].scrollHeight);
         this.removeElements();
-        if (plugCubed == undefined) $.getScript("http://plugcubed.com/compiled/plugcubed.min.js")
+        if (plugCubed == undefined) $.getScript("http://plugcubed.com/compiled/plugCubed.min.js")
             window.alert = function(data){
             var a = $('#chat-messages'),b = a.scrollTop() > a[0].scrollHeight - a.height() - 20;
             a.append('<div class="chat-update"><span class="chat-text" style="color:#FF0000"><strong>[Window Alert]</strong></span><span style="color:#FFFFFF"> : ' + data + '</span></div>'); 
