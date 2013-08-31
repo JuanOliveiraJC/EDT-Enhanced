@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 7,
-        patch: 2
+        patch: 3
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -164,11 +164,11 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/micky_jackson.png") repeat scroll center top #000000;}'
+            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/edt.png") repeat scroll center top #000000;}'
             + '#room-wheel {position:absolute;top:50px;}'
             + '#button-lobby { background-image: url("http://i.imgur.com/yPDS755.png");}'
             + 'body {color:#FF0000;}'
-            + '#current-dj-value {color:#FF0000;}'
+            + '#current-dj-value {color:#66FFFF;}'
             + '.chat-title {font-family: "Faster One", cursive;}'
             + '#button-dj-play.button-dj {background-image: url("http://i.imgur.com/mU73z92.png");}'
             + '#button-dj-quit.button-dj {background-image: url("http://i.imgur.com/buJh0HE.png");}'
@@ -182,9 +182,9 @@ EDTEnhancedModel = require('app/base/Class').extend({
             + '#button-refresh {background-image: url("http://i.imgur.com/6PT86jE.png");}'
             + '#button-hd-on {background-image: url("http://i.imgur.com/k8uivQP.png");}'
             + '#button-hd-off {background-image: url("http://i.imgur.com/jhkFyr2.png");}'
-            + '#current-dj-value {color:#FF0000;}'
-            + '#now-playing-value{color:#FF0000;}'
-            + '#room-score-value{color:#FF0000;}'
+            + '#current-dj-value {color:#66FFFF;}'
+            + '#now-playing-value{color:#66FFFF;}'
+            + '#room-score-value{color:#66FFFF;}'
             + '#chat {color:#00D1FF;}'
             + '.chat-cohost {color:#00FF95;}'
             + '.chat-host {color:#4CFF00;}'
