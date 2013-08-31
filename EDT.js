@@ -9,7 +9,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
     version: {
         major: 1,
         minor: 9,
-        patch: 3
+        patch: 4
     },
     toString: function() { return EDTEnhanced.version.major + '.' + EDTEnhanced.version.minor + '.' + EDTEnhanced.version.patch},
     init: function(){
@@ -164,7 +164,7 @@ EDTEnhancedModel = require('app/base/Class').extend({
         $('body').attr('style','background: none');
             $('head').append('<link href="http://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet" type="text/css">'
             + '<style type="text/css" id="EDT-css">'
-            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/edt.png") repeat scroll center top #000000;}'
+            + 'html{background: url("https://dl.dropboxusercontent.com/u/198705975/edt.png") no-repeat scroll center top #000000;}'
             + '#room-wheel {position:absolute;top:50px;}'
             + '#button-lobby { background-image: url("http://i.imgur.com/yPDS755.png");}'
             + 'body {color:#FF0000;}'
